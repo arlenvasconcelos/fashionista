@@ -10,9 +10,12 @@ const ProductsRoutes = () => {
 
   useEffect(() => {
     getProducts()
-      .then(data => setProducts(data))
+      .then(data => {
+        setProducts(data)
+        console.log(data)
+      })
       .catch(err => console.log('Error at getProducts'))
-  })
+  },[])
   
   return (
     <>
