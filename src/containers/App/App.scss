@@ -38,16 +38,12 @@ button {
   margin: 0 auto;
   position: relative;
   width: 100%;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1216){
   .container {
-    width: 668px;
-  }
-}
-
-@media screen and (min-width: 1024px){
-  .container {
-    width: 924px;
+    width: 1216;
   }
 }
