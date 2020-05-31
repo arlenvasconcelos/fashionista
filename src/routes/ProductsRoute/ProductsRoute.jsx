@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import Products from '../../containers/Products';
 
 import {getProducts} from '../../service/api'
+import Loading from '../../components/Loading';
 
 const ProductsRoutes = () => {
 
@@ -19,7 +20,11 @@ const ProductsRoutes = () => {
   
   return (
     <>
-      <Products products={products}/>
+      {
+        products.length 
+          ? <Products products={products}/>
+          : <Loading/>
+      }
     </>
   )
 }
