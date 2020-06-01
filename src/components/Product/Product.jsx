@@ -1,24 +1,26 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
+import './Product.scss'
+
 const Product = ({product}) => {
   return (
     <>
-      <Link to={`/produto/${product.name.replace(' ', '-')}`}>
-        <div className="product__paper">
-          <div className="product__img">
+      <div className="product">
+        <Link to={`/produto/${product.name.replace(' ', '-')}`}>
+          <div>
             <img src={product.image} alt={product.name}/>
           </div>
-          <div className="product.footer">
-            <div>
+          <div className="product__footer">
+            <div className="product__name">
               {product.name}
             </div>
             <div>
-              {product.actual_price}
+              {product.actual_price}  
             </div>
           </div>
-        </div>
-      </Link>
+        </Link>
+      </div>
     </>
   )
 }

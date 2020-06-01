@@ -1,0 +1,32 @@
+.product{
+  padding: 8px; 
+  flex: 1;
+  min-width: 25%;
+  max-width: 25%;
+  img {
+    max-width: 100%;
+  }
+  
+  .product__footer{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    
+    .product__name{
+      font-weight: bold;
+    }
+  }
+  
+}
+
+@media screen and (max-width: 992px) {
+  .product {
+    min-width: 33%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .product {
+    min-width: 50%;
+  }
+}
+  
