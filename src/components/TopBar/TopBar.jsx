@@ -1,14 +1,17 @@
 import React from 'react';
 
 import './TopBar.scss'
+import { Link } from 'react-router-dom';
 
 export default () => (
   <header className="topbar">
     <div className="container">
       <div className="topbar__content">
-        <div>
-          FASHIONISTA
-        </div>
+        <Link to="/">
+          <div>
+            FASHIONISTA
+          </div>
+        </Link>
         <div className="topbar__icons">
           <button className="icon">
             <i className="fas fa-search"></i>

@@ -1,22 +1,29 @@
 import React, { useEffect, useState } from 'react';
+import { useSelector, useDispatch } from "react-redux";
+import {setProducts as setProductsAction} from '../../store/actions/products';
 
+//components
 import Products from '../../containers/Products';
-
-import {getProducts} from '../../service/api'
 import Loading from '../../components/Loading';
+
+//service
+import {getProducts} from '../../service/api'
 
 const ProductsRoutes = () => {
 
-  const [products, setProducts] = useState([])
+  const dispatch = useDispatch();
+
+  const {products} = useSelector(state => state);
 
   useEffect(() => {
     getProducts()
       .then(data => {
-        setProducts(data)
+        dispatch(setProductsAction(data));
         console.log(data)
       })
       .catch(err => console.log('Error at getProducts'))
-  },[])
+    
+  },[dispatch])
   
   return (
     <>

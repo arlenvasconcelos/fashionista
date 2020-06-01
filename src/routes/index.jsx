@@ -7,7 +7,7 @@ import SingleProductRoute from './SingleProductRoute'
 const Routes = () => (
   <>
     <Switch>
-      <Route path="/" component={ProductsRoute} />
+      <Route path="/" exact component={ProductsRoute} />
       <Route path="/produto/:name" component={SingleProductRoute} />
     </Switch>
   </>
