@@ -8,7 +8,7 @@ export default () => (
     <div className="container">
       <div className="topbar__content">
         <Link to="/">
-          <div>
+          <div className="topbar__logo">
             FASHIONISTA
           </div>
         </Link>

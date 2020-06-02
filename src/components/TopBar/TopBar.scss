@@ -1,17 +1,34 @@
 .topbar{
-  background-color: white;
+  background-color: #1D2224;
+  color: white;
   padding-top: 16px;
   padding-bottom: 16px;
   font-size: 1.8rem;
+
+  .topbar__logo{
+    font-family: 'Chelsea Market', cursive;
+    color: white;
+    border-radius: 5px;
+    padding: 8px;
+    &:hover{
+      color: #FF324D;
+    }
+  }
+
+  .topbar__icons{
+    display: flex;
+    justify-content: space-between;
+    i:hover {
+      color: #FF324D;
+    }
+  }
   
   .topbar__content{
     display: flex;
     justify-content: space-between;
   }
-  .topbar__icons{
-    display: flex;
-    justify-content: space-between;
-  }
+
+  
 }
 
 
