@@ -8,12 +8,17 @@ const ProductDetails = ({product}) => {
   const [selectedSize, setSelectedSize] = useState("");
 
   const handleSize = (value) => {
-    setSelectedSize(value)
+    if (value === selectedSize) {
+      setSelectedSize("");
+    }
+    else {
+      setSelectedSize(value);
+    }
   }
 
   const handleAddItem = (e) => {
     e.preventDefault();
-    
+
 
   }
 
@@ -49,7 +54,7 @@ const ProductDetails = ({product}) => {
           onSale={product.on_sale}
         />
         <div className="details__installments">
-          {product.installments ? product.installments + ' sem juros' : ''} 
+          {product.installments ? `${product.installments} sem juros` : ''} 
         </div>
         
         <button 

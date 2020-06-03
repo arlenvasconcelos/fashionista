@@ -1,8 +1,8 @@
 import {TYPES} from '../actions/cart';
 
-const cartReducer = (state = [], action) => {
+const cartReducer = (state = {items: [], open: false}, action) => {
   switch (action.type) {
-    case TYPES.UPDATE_CART:
+    case TYPES.UPDATE_ITEMS:
       return {
         ...state,
         cart: action.payload
@@ -11,6 +11,16 @@ const cartReducer = (state = [], action) => {
       return {
         ...state,
         cart: [],
+      }
+    case TYPES.OPEN_CART:
+      return {
+        ...state,
+        open: true,
+      }
+    case TYPES.CLOSE_CART:
+      return {
+        ...state,
+        open: false,
       }
       
     default:
