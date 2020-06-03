@@ -10,20 +10,40 @@ const ProductDetails = ({product}) => {
 
   const dispatch = useDispatch();
 
-  const [selectedSize, setSelectedSize] = useState("");
+  const [selectedSize, setSelectedSize] = useState('');
+  const [error, setError] = useState({
+    message: '',
+    status: false
+  });
 
   const handleSize = (value) => {
     if (value === selectedSize) {
-      setSelectedSize("");
+      setSelectedSize('');
     }
     else {
       setSelectedSize(value);
+      setError({
+        message: "",
+        status: false,
+      })
     }
   }
 
   const handleAddItem = (e) => {
     e.preventDefault();
 
+    if (selectedSize !== ''){
+      dispatch(addItem({
+        ...product,
+        selectedSize
+      }))
+    }
+    else {
+      setError({
+        message: "Por favor, selecione um tamanho.",
+        status: true,
+      })
+    }
 
   }
 
@@ -68,7 +88,9 @@ const ProductDetails = ({product}) => {
         >
           COMPRAR
         </button>
-        
+        {
+          error.status ? <span className="details__error">{error.message}</span> :  <></>
+        }
       </div>
     </div>
   )
