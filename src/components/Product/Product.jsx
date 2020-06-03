@@ -1,7 +1,7 @@
 import React, {useState, useEffect}from 'react';
 import {Link} from 'react-router-dom';
 
-import ProductPrice from '../ProductPrince.jsx';
+import ProductPrice from '../ProductPrice';
 import NoImage from '../NoImage';
 
 import './Product.scss'

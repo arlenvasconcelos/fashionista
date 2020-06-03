@@ -1,7 +1,7 @@
 import React from 'react';
 
 import './ProductDetails.scss';
-import ProductPrice from '../ProductPrince.jsx';
+import ProductPrice from '../ProductPrice';
 
 const ProductDetails = ({product}) => {
   return (

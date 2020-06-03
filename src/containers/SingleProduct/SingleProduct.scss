@@ -4,7 +4,8 @@
   display: flex;
   padding: 16px;
   margin: auto;
+  height: calc(100vh - 80px);
   & > div {
-    max-width: 50%;
+    min-width: 50%;
   }
 }

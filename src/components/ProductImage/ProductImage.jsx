@@ -1,11 +1,17 @@
 import React from 'react';
 
 import './ProductImage.scss'
+import NoImage from '../NoImage';
 
 const ProductImage = ({path}) => {
   return (
     <div className="product-image">
-      <img src={path} alt=""/>
+      {
+        path 
+          ? <img src={path} alt=""/>
+          : <NoImage/>
+      }
+      
     </div>
   )
 }
