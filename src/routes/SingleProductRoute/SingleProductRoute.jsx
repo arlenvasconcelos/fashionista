@@ -10,11 +10,10 @@ const SingleProductRoute = () => {
   console.log(name)
 
   const {products} = useSelector(state => state)
-  console.log(products)
   const [product, setProduct] = useState({});
 
   useEffect(() => {
-    setProduct(products.find(p => p.style + p.name.toLowerCase().trim().replace(/ /g, '-') === name));
+    setProduct(products.find(p => p.style + '-' + p.name.toLowerCase().trim().replace(/ /g, '-') === name));
   },[products, name])
 
   if (!products.length){

@@ -1,0 +1,12 @@
+.product-details{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  .details__content{
+    margin-left: 64px;
+    font-size: 1.2em;
+    .details__name{
+      font-size: 1.2em;
+    }
+  }
+}

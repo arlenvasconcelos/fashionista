@@ -9,7 +9,7 @@ const Product = ({product}) => {
     <>
       <div className="product">
         <Link 
-          to={`/produto/${product.name.toLowerCase().trim().replace(/ /g, '-')}`}
+          to={`/produto/${product.style}-${product.name.toLowerCase().trim().replace(/ /g, '-')}`}
         >
           <div className="product__content">
             {

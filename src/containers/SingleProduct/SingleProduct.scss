@@ -1,9 +1,10 @@
 .single-product{
   width: 100%;
   max-width: 888px;
-  display: grid;
-  align-self: center;
-  grid-template-columns: 50% 50%;
+  display: flex;
   padding: 16px;
-  margin: auto
+  margin: auto;
+  & > div {
+    max-width: 50%;
+  }
 }

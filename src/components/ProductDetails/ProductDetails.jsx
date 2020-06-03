@@ -1,10 +1,15 @@
 import React from 'react';
 
+import './ProductDetails.scss';
 
-const ProductDetails = () => {
+const ProductDetails = ({product}) => {
   return (
     <div className="product-details">
-      ProductDetails
+      <div className="details__content">
+        <div className="details__name">
+          {product.name}
+        </div>
+      </div>
     </div>
   )
 }

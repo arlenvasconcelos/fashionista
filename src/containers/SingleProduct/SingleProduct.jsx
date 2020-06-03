@@ -6,11 +6,13 @@ import './SingleProduct.scss';
 
 const SingleProduct = ({product}) => {
 
+  console.log(product)
+
   return (
     <div className="container">
       <div className="single-product">
-        <ProductImage/>
-        <ProductDetails/>
+        <ProductImage path={product.image}/>
+        <ProductDetails product={product}/>
       </div>
     </div>
   )

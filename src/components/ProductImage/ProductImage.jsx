@@ -1,9 +1,11 @@
 import React from 'react';
 
+import './ProductImage.scss'
+
 const ProductImage = ({path}) => {
   return (
-    <div>
-      Image
+    <div className="product-image">
+      <img src={path} alt=""/>
     </div>
   )
 }
