@@ -1,6 +1,9 @@
 .single-product{
-  display: flex;
   width: 100%;
   max-width: 888px;
-  
+  display: grid;
+  align-self: center;
+  grid-template-columns: 50% 50%;
+  padding: 16px;
+  margin: auto
 }
