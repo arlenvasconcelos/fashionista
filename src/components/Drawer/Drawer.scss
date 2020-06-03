@@ -1,11 +1,10 @@
 .drawer{
   right: 0;
-  top: 0;
   height: 100vh;
   background-color: #1D2224;
   position: absolute;
   width: 360px;
-  z-index: 1;
+  z-index: 2;
   padding: 16px;
 
   transition: all .5s ease-in-out;
@@ -13,5 +12,11 @@
 
 .inactive {
   right: -400px;
+}
+
+@media screen and (max-width: 450px) {
+  .drawer {
+    width: 100%;
+  }
 }
 

@@ -14,6 +14,14 @@ const CartDetails = ({cart}) => {
     dispatch(closeCart())
   }
 
+  const handleDecrementItem = () => {
+    
+  }
+
+  const handleAddItem = () => {
+
+  }
+
   return (
     <div className="cart__details">
       <button onClick={handleClickBackButton} className="cart__button__back">
@@ -25,8 +33,25 @@ const CartDetails = ({cart}) => {
             <div className="item__image">
               <ProductImage path={item.image}/>
             </div>
-            <div className="item__details">
-              {item.style}
+            <div className="item__details"> 
+              <div className="item__name">{item.name}</div>
+              <div className="item__size">Tam: {item.selected_size}</div>
+              <div className="item__installments">{item.installments} sem juros</div>
+              <div>
+                <button 
+                  className="item__button"
+                  onClick={() => handleDecrementItem(item.style)}
+                >
+                  -
+                </button>
+                {item.quantity ? "1": "0"}
+                <button 
+                  className="item__button"
+                  onClick={() => handleAddItem(item.style)}
+                >
+                  +
+                </button>  
+              </div>
             </div>
           </div>
         ))

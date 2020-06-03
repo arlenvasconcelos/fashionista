@@ -8,9 +8,30 @@ const cartReducer = (state = {items: [], open: false}, action) => {
         items: action.payload
       }
     case TYPES.ADD_ITEM:
+      if (state.items.find(item => item.style === action.payload.style 
+        && item.selected_size === action.payload.selected_size)
+      ){
+        console.log('entreou aqui')
+        const items = state.items.map(item => {
+          console.log(item, action.payload)
+          if (item.style === action.payload.style && item.selected_size === action.payload.selected_size){
+            return ({
+              ...item, 
+              quantity: item.quantity + 1,
+            });
+          }
+          else {
+            return item;
+          }
+        })
+        return {
+          ...state,
+          items
+        }
+      }
       return {
         ...state,
-        items: [...state.items, action.payload]
+          items: [...state.items, {...action.payload, quantity: 1}]
       }
     case TYPES.CLEAR_CART:
       return {

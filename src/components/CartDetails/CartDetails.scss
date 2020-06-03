@@ -6,18 +6,39 @@
   }
 
   .cart__item{
-    border: 1px solid white;
-    // background-color: white;
+    margin-bottom: 16px;
     display: flex;
+    height: 150px;
     .item__image{
-      max-height: 150px;
+      height: 100%;
+      width: auto;
+      max-width: 35%;
       & *{
         height: 100%;
-        width: auto;
       }
     }
     .item__details{
-      
+      color: white;
+      padding: 8px;
+      .item__name{
+        font-weight: bold;
+        color: #ff324d
+      }
+      .item__installments{
+        margin-top: 16px;
+      }
+      .item__button{
+        margin-top: 16px;
+        margin-left: 8px;
+        margin-right: 8px;
+        padding-top: 4px;
+        padding-bottom: 4px;
+        padding-left: 8px;
+        padding-right: 8px;
+        font-weight: bold;
+        background-color: #ff324d;
+        border-radius: 5px;
+      }
     }
   }
 }
