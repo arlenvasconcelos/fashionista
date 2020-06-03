@@ -1,0 +1,14 @@
+.product__price{
+  padding-top: 8px;
+  font-weight: bold;
+  color: #FF324D;
+  font-size: 1.3em;
+  
+  span {
+    margin-left: 8px; 
+    font-weight: normal;
+    text-decoration: line-through;
+    color: #666;
+    font-size: initial;
+  }
+}

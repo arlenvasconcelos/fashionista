@@ -2,6 +2,7 @@ import React, {useState, useEffect}from 'react';
 import {Link} from 'react-router-dom';
 
 import './Product.scss'
+import ProductPrice from '../ProductPrince.jsx';
 
 const Product = ({product}) => {
 
@@ -25,13 +26,11 @@ const Product = ({product}) => {
               <div className="product__name">
                 {product.name}
               </div>
-              <div className="product__price">
-                {product.actual_price}
-                { product.on_sale
-                  ? <span>{product.regular_price}</span>
-                  : <></>
-                }
-              </div>
+              <ProductPrice 
+                regularPrice={product.regular_price}
+                actualPrice={product.actual_price}
+                onSale={product.on_sale}
+              />
             </div>
           </div>
         </Link>
