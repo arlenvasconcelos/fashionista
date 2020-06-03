@@ -2,7 +2,7 @@ import {TYPES} from '../actions/products';
 
 const productsReducer = (state = [], action) => {
   switch (action.type) {
-    case TYPES.LOAD_PRODUCTS:
+    case TYPES.SET_PRODUCTS:
       console.log(action.payload) 
       return [
         ...state,

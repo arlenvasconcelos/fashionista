@@ -1,10 +1,10 @@
 const TYPES = {
-  LOAD_PRODUCTS: 'LOAD_PRODUCTS'
+  SET_PRODUCTS: 'SET_PRODUCTS'
 }
 
 const setProducts = (data) => {
   return ({
-    type: TYPES.LOAD_PRODUCTS,
+    type: TYPES.SET_PRODUCTS,
     payload: data,
   })
 }
