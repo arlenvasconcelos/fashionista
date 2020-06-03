@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {useDispatch} from 'react-redux';
-import {closeCart} from '../../store/actions/cart';
+import {closeCart, addItem, decreaseItem, removeItem} from '../../store/actions/cart';
 
 import ProductImage from '../ProductImage';
 
@@ -14,12 +14,21 @@ const CartDetails = ({cart}) => {
     dispatch(closeCart())
   }
 
-  const handleDecrementItem = () => {
-    
+  const handleDecreaseItem = (item) => {
+    if (item.quantity > 1){
+      dispatch(decreaseItem(item))
+    }
+    else {
+      dispatch(removeItem(item));
+    }
   }
 
-  const handleAddItem = () => {
+  const handleAddItem = (item) => {
+    dispatch(addItem(item));
+  }
 
+  const handleRemoveItem = (item) => {
+    dispatch(removeItem(item));
   }
 
   return (
@@ -34,20 +43,25 @@ const CartDetails = ({cart}) => {
               <ProductImage path={item.image}/>
             </div>
             <div className="item__details"> 
-              <div className="item__name">{item.name}</div>
+              <div className="item__header">
+                {item.name}
+                <button onClick={() => handleRemoveItem(item)}>
+                  <i class="fas fa-trash-alt"></i> 
+                </button>
+              </div>
               <div className="item__size">Tam: {item.selected_size}</div>
               <div className="item__installments">{item.installments} sem juros</div>
               <div>
                 <button 
                   className="item__button"
-                  onClick={() => handleDecrementItem(item.style)}
+                  onClick={() => handleDecreaseItem(item)}
                 >
                   -
                 </button>
-                {item.quantity ? "1": "0"}
+                {item.quantity}
                 <button 
                   className="item__button"
-                  onClick={() => handleAddItem(item.style)}
+                  onClick={() => handleAddItem(item)}
                 >
                   +
                 </button>  

@@ -6,6 +6,7 @@
   }
 
   .cart__item{
+    background-color: rgba(255, 255, 255, 0.05);
     margin-bottom: 16px;
     display: flex;
     height: 150px;
@@ -18,11 +19,28 @@
       }
     }
     .item__details{
+      width: 100%;
       color: white;
       padding: 8px;
-      .item__name{
+      .item__header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         font-weight: bold;
-        color: #ff324d
+        color: #ff324d;
+        
+        button{
+          background-color: initial;
+          padding-top: 4px;
+          padding-bottom: 4px;
+          padding-right: 8px;
+          padding-left: 8px;
+          margin-left: 16px;
+          i{
+            color: white;
+          }
+        }
+
       }
       .item__installments{
         margin-top: 16px;

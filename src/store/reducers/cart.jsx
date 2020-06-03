@@ -33,6 +33,29 @@ const cartReducer = (state = {items: [], open: false}, action) => {
         ...state,
           items: [...state.items, {...action.payload, quantity: 1}]
       }
+    case TYPES.DECREASE_ITEM:
+      const items = state.items.map(item => {
+        if (item.style === action.payload.style && item.selected_size === action.payload.selected_size){
+          return ({
+            ...item, 
+            quantity: item.quantity - 1,
+          });
+        }
+        else {
+          return item;
+        }
+      })
+      return {
+        ...state,
+        items
+      }
+    case TYPES.REMOVE_ITEM:
+      const filteredItems = state.items.filter(item => !(item.style === action.payload.style 
+        && item.selected_size === action.payload.selected_size))
+      return {
+        ...state,
+        items: filteredItems
+      }
     case TYPES.CLEAR_CART:
       return {
         ...state,
