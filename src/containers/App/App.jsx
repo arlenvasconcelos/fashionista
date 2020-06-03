@@ -5,6 +5,7 @@ import './App.scss';
 import Routes from '../../routes'
 import TopBar from '../../components/TopBar';
 import Drawer from '../../components/Drawer';
+import Cart from '../Cart';
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
     <div className="App">
       <Router>
         <TopBar/>
+        <Cart/>
         {/* <Drawer/> */}
         <Routes/>
       </Router>

@@ -5,12 +5,17 @@ const cartReducer = (state = {items: [], open: false}, action) => {
     case TYPES.UPDATE_ITEMS:
       return {
         ...state,
-        cart: action.payload
+        items: action.payload
+      }
+    case TYPES.ADD_ITEM:
+      return {
+        ...state,
+        items: [...state.items, action.payload]
       }
     case TYPES.CLEAR_CART:
       return {
         ...state,
-        cart: [],
+        items: []
       }
     case TYPES.OPEN_CART:
       return {

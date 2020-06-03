@@ -1,9 +1,14 @@
 import React, {useState} from 'react';
+import {useDispatch} from 'react-redux'
+
+import {openCart, addItem} from '../../store/actions/cart';
 
 import './ProductDetails.scss';
 import ProductPrice from '../ProductPrice';
 
 const ProductDetails = ({product}) => {
+
+  const dispatch = useDispatch();
 
   const [selectedSize, setSelectedSize] = useState("");
 

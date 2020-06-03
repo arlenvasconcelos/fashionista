@@ -4,13 +4,21 @@ const TYPES = {
   CLEAR_CART: 'CLEAR_CART',
   OPEN_CART: 'OPEN_CART',
   CLOSE_CART: 'CLOSE_CART',
-  UPDATE_ITEMS: 'UPDATE_CART',
+  UPDATE_ITEMS: 'UPDATE_ITEMS',
+  ADD_ITEM: 'ADD_ITEM',
 }
 
 
 const updateItems = (data) => {
   return ({
     type: TYPES.UPDATE_ITEMS,
+    payload: data,
+  })
+}
+
+const addItem = (data) => {
+  return ({
+    type: TYPES.ADD_ITEM,
     payload: data,
   })
 }
@@ -32,4 +40,4 @@ const closeCart = () => {
   })
 }
 
-export { TYPES, updateItems, clearCart, openCart, closeCart }
+export { TYPES, updateItems, addItem, clearCart, openCart, closeCart }
