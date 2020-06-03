@@ -35,8 +35,9 @@ const ProductDetails = ({product}) => {
     if (selectedSize !== ''){
       dispatch(addItem({
         ...product,
-        selectedSize
+        selected_size: selectedSize
       }))
+      dispatch(openCart())
     }
     else {
       setError({

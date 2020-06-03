@@ -1,10 +1,10 @@
 import React from 'react';
 
-const Drawer = () => {
+const Drawer = ({children}) => {
   return (
-    <>
-      Drawer
-    </>
+    <div className="drawer">
+      {children}
+    </div>
   )
 }
 
