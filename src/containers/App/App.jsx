@@ -1,24 +1,31 @@
 import React, { useState } from 'react';
 import {BrowserRouter as Router} from 'react-router-dom';
+import {useDispatch} from 'react-redux';
+
+import {openCart} from '../../store/actions/cart'
+
 import './App.scss';
 
-import Routes from '../../routes'
+import Routes from '../../routes';
 import TopBar from '../../components/TopBar';
 import Drawer from '../../components/Drawer';
 import Cart from '../Cart';
 
 function App() {
 
-  const [showDrawer, setShowDrawer] = useState();
+  const dispatch = useDispatch();
 
-  const handleCloseDrawer = () => {
-    setShowDrawer(false)
+  const closeCart = () => {
+    dispatch(openCart())
   }
+  
 
   return (
     <div className="App">
       <Router>
-        <TopBar/>
+        <TopBar 
+          closeCart={closeCart}
+        />
         <Cart/>
         {/* <Drawer/> */}
         <Routes/>

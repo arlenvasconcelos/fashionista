@@ -15,13 +15,9 @@ const Cart = () => {
   return (
     <>
       {
-        cart.open ? (
-          <Drawer>
-            <CartDetails cart={cart}/>
-          </Drawer>
-        ) : (
-          <></>
-        )
+        <Drawer open={cart.open}>
+          <CartDetails cart={cart}/>
+        </Drawer>
       }
     </>
   )

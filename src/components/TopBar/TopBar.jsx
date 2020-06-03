@@ -3,7 +3,7 @@ import React from 'react';
 import './TopBar.scss'
 import { Link } from 'react-router-dom';
 
-export default () => (
+export default ({closeCart}) => (
   <header className="topbar">
     <div className="container">
       <div className="topbar__content">
@@ -13,10 +13,10 @@ export default () => (
           </div>
         </Link>
         <div className="topbar__icons">
-          <button className="icon">
+          <button className="icon" >
             <i className="fas fa-search"></i>
           </button>
-          <button className="icon">
+          <button className="icon" onClick={closeCart}>
             <i className="fas fa-shopping-cart"></i>
           </button>
         </div>

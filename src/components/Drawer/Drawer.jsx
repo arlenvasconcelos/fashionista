@@ -2,10 +2,10 @@ import React from 'react';
 
 import './Drawer.scss';
 
-const Drawer = ({children}) => {
+const Drawer = ({open, children}) => {
   return (
   <>
-    <div className="drawer">
+    <div className={`drawer ${!open ? 'inactive' : ''}`}>
       {children}
     </div>
   </>

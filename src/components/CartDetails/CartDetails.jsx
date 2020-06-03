@@ -17,7 +17,7 @@ const CartDetails = ({cart}) => {
   return (
     <div className="cart__details">
       <button onClick={handleClickBackButton} className="cart__button__back">
-        <i class="fas fa-arrow-left"></i>
+        <i class="fas fa-arrow-right"></i>
       </button>
       {
         cart.items && cart.items.map((item) => (

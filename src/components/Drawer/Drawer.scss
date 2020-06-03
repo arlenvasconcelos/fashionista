@@ -7,4 +7,11 @@
   width: 360px;
   z-index: 1;
   padding: 16px;
+
+  transition: all .5s ease-in-out;
 }
+
+.inactive {
+  right: -400px;
+}
+
