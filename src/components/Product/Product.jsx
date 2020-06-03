@@ -1,8 +1,10 @@
 import React, {useState, useEffect}from 'react';
 import {Link} from 'react-router-dom';
 
-import './Product.scss'
 import ProductPrice from '../ProductPrince.jsx';
+import NoImage from '../NoImage';
+
+import './Product.scss'
 
 const Product = ({product}) => {
 
@@ -16,7 +18,7 @@ const Product = ({product}) => {
             {
               product.image 
                 ? <img src={product.image} alt={product.name}/>
-                : <div className="product__noimage">Imagem indisponível</div>
+                : <NoImage/>
             }
             { product.on_sale 
                 ? <div className="price__off">{'- ' + product.discount_percentage}</div>
