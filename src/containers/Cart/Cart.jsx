@@ -17,7 +17,7 @@ const Cart = () => {
       {
         cart.open ? (
           <Drawer>
-            <CartDetails/>
+            <CartDetails cart={cart}/>
           </Drawer>
         ) : (
           <></>

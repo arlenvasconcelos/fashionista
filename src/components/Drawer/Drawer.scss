@@ -1,5 +1,10 @@
 .drawer{
   right: 0;
+  top: 0;
   height: 100vh;
   background-color: #1D2224;
+  position: absolute;
+  width: 360px;
+  z-index: 1;
+  padding: 16px;
 }

@@ -1,0 +1,23 @@
+.cart__details{
+  .cart__button__back{
+    font-size: 2em;
+    color: white;
+    margin-bottom: 8px;
+  }
+
+  .cart__item{
+    border: 1px solid white;
+    // background-color: white;
+    display: flex;
+    .item__image{
+      max-height: 150px;
+      & *{
+        height: 100%;
+        width: auto;
+      }
+    }
+    .item__details{
+      
+    }
+  }
+}
