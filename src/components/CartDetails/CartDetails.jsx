@@ -29,14 +29,9 @@ const CartDetails = ({cart}) => {
 
   return (
     <div className="cart__details">
-      {/* <div>
-        <button onClick={handleCloseCart} className="cart__button__back">
-          <i class="fas fa-arrow-right"></i>
-        </button>
-      </div> */}
       {
-        cart.items && cart.items.map((item) => (
-          <div className="cart__item">
+        cart.items && cart.items.map((item, key) => (
+          <div key={key} className="cart__item">
             <div className="item__image">
               <ProductImage path={item.image}/>
             </div>
@@ -44,7 +39,7 @@ const CartDetails = ({cart}) => {
               <div className="item__header">
                 {item.name}
                 <button onClick={() => handleRemoveItem(item)}>
-                  <i class="fas fa-trash-alt"></i> 
+                  <i className="fas fa-trash-alt"></i> 
                 </button>
               </div>
               <div className="item__size">Tam: {item.selected_size}</div>

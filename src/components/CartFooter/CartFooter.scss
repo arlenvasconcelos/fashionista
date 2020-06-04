@@ -1,4 +1,19 @@
 .cart__footer{
+  background-color: #4A4E50;
   position: absolute;
   bottom: 0px;
+  width: 100%;
+
+  .footer__content{
+    color: white;
+    padding: 16px;
+
+  }
+
+  button{
+    width: 100%;
+    background-color: #c6ff00;
+    padding: 8px;
+    font-weight: bold;
+  }
 }

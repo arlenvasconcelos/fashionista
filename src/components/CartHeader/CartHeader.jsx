@@ -2,7 +2,7 @@ import React from 'react';
 import {useDispatch} from 'react-redux';
 import {closeCart} from '../../store/actions/cart';
 
-import './CartDetails.scss';
+import './CartHeader.scss';
 
 const CartHeader = () => {
 
@@ -13,9 +13,9 @@ const CartHeader = () => {
   }
 
   return (
-    <div>
-      <button onClick={handleCloseCart} className="cart__header">
-        <i class="fas fa-arrow-right"></i>
+    <div className="cart__header">
+      <button onClick={handleCloseCart} >
+        <i className="fas fa-arrow-right"></i>
       </button>
     </div>
   )
