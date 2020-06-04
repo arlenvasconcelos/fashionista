@@ -39,9 +39,9 @@ const CartDetails = ({cart}) => {
             </div>
             <div className="item__details"> 
               <div className="item__header">
-                {item.name}
+                <h4>{item.name}</h4>
                 <button onClick={() => handleRemoveItem(item)}>
-                  <Trash/>
+                  <Trash size={16}/>
                 </button>
               </div>
               <div className="item__size">Tam: {item.selected_size}</div>

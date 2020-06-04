@@ -1,5 +1,3 @@
-import {getProducts as getProductsAPI} from '../../service/api'
-
 const TYPES = {
   CLEAR_CART: 'CLEAR_CART',
   OPEN_CART: 'OPEN_CART',

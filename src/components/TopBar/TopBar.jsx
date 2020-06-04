@@ -11,7 +11,7 @@ export default ({closeCart}) => {
 
   const {cart} = useSelector(state => state);
 
-  const [quantity, setQuantity] = useState(0)
+  const [quantity, setQuantity] = useState(0);
 
   useEffect(() => {
     setQuantity(
@@ -38,7 +38,7 @@ export default ({closeCart}) => {
             <button className="icon" onClick={closeCart}>
               {
                 cart.items.length 
-                  ? <Notification value={quantity}/> 
+                  ? <Notification value={quantity}/>
                   : <></>
               }
               <ShoppingCart/>

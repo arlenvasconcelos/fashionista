@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {useDispatch, useSelector} from 'react-redux'
+import {useDispatch} from 'react-redux'
 
 import {openCart, addItem} from '../../store/actions/cart';
 
@@ -7,8 +7,6 @@ import './ProductDetails.scss';
 import ProductPrice from '../ProductPrice';
 
 const ProductDetails = ({product}) => {
-
-  const {cart} = useSelector(state => state);
 
   const dispatch = useDispatch();
 

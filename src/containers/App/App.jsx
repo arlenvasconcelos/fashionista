@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {BrowserRouter as Router} from 'react-router-dom';
 import {useDispatch} from 'react-redux';
 
@@ -8,7 +8,6 @@ import './App.scss';
 
 import Routes from '../../routes';
 import TopBar from '../../components/TopBar';
-import Drawer from '../../components/Drawer';
 import Cart from '../Cart';
 
 function App() {

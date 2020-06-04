@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from "react-redux";
 import {setProducts as setProductsAction} from '../../store/actions/products';
 
@@ -19,7 +19,6 @@ const ProductsRoutes = () => {
     getProducts()
     .then(data => {
       dispatch(setProductsAction(data));
-      console.log(data)
     })
     .catch(err => console.log('Error at getProducts'))
     

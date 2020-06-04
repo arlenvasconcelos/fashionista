@@ -7,7 +7,6 @@ import SingleProduct from '../../containers/SingleProduct';
 const SingleProductRoute = () => {
 
   const {name} = useParams();
-  console.log(name)
 
   const {products} = useSelector(state => state)
   const [product, setProduct] = useState({});

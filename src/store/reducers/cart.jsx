@@ -11,9 +11,7 @@ const cartReducer = (state = {items: [], open: false}, action) => {
       if (state.items.find(item => item.style === action.payload.style 
         && item.selected_size === action.payload.selected_size)
       ){
-        console.log('entreou aqui')
         const items = state.items.map(item => {
-          console.log(item, action.payload)
           if (item.style === action.payload.style && item.selected_size === action.payload.selected_size){
             return ({
               ...item, 
