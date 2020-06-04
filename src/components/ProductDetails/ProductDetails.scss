@@ -59,3 +59,28 @@
   }
 
 }
+
+@media screen and (max-width: 450px){
+  .product-details{
+    display: flex;
+    justify-content: center;
+    .details__content{
+      margin-left: 0;
+      text-align: center;
+      width: 100%;
+      
+      .details__sizes{
+        display: flex;
+        justify-content: center;
+      }
+
+      .details__button{
+        width: 100%;
+        margin-top: 32px;
+        font-weight: bold;
+        padding: 16px 8px;
+      }
+    }
+
+  }
+}

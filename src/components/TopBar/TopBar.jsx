@@ -17,12 +17,8 @@ export default () => {
 
   const [quantity, setQuantity] = useState(0);
 
-  const handleCartOpen = () => {
+  const handleCartButton = () => {
     dispatch(openCart())
-  }
-
-  const handleCartClose = () => {
-    dispatch(closeCart())
   }
 
   useEffect(() => {
@@ -46,7 +42,7 @@ export default () => {
             <button className="icon" >
               <Search/>
             </button>
-            <button className="icon" onClick={cart.open ? handleCartClose : handleCartOpen}>
+            <button className="icon" onClick={handleCartButton}>
               {
                 cart.items.length 
                   ? <Notification value={quantity}/>

@@ -2,10 +2,19 @@
   color: white;
   display: flex;
   align-items: center;
-  margin: 16px 8px;
+  padding: 16px 8px;
+  button {
+    position: absolute;
+  }
   span{
     font-size: 1.3em;
     width: 100%;
     text-align: center;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .cart__header {
+    padding: 16px 0;
   }
 }

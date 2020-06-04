@@ -1,9 +1,11 @@
 .topbar{
   background-color: #1D2224;
   color: white;
-  padding-top: 16px;
-  padding-bottom: 16px;
+  padding: 16px 8px;
   font-size: 1.8rem;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
 
   .topbar__logo{
     font-family: 'Chelsea Market', cursive;
