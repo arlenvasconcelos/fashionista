@@ -2,6 +2,8 @@ import React from 'react';
 import {useDispatch} from 'react-redux';
 import {addItem, decreaseItem, removeItem} from '../../store/actions/cart';
 
+import { Trash } from 'react-feather';
+
 import ProductImage from '../ProductImage';
 
 import './CartDetails.scss';
@@ -39,7 +41,7 @@ const CartDetails = ({cart}) => {
               <div className="item__header">
                 {item.name}
                 <button onClick={() => handleRemoveItem(item)}>
-                  <i className="fas fa-trash-alt"></i> 
+                  <Trash/>
                 </button>
               </div>
               <div className="item__size">Tam: {item.selected_size}</div>

@@ -1,4 +1,5 @@
 import React from 'react';
+import {Search, ShoppingCart} from 'react-feather'
 
 import './TopBar.scss'
 import { Link } from 'react-router-dom';
@@ -14,10 +15,10 @@ export default ({closeCart}) => (
         </Link>
         <div className="topbar__icons">
           <button className="icon" >
-            <i className="fas fa-search"></i>
+            <Search/>
           </button>
           <button className="icon" onClick={closeCart}>
-            <i className="fas fa-shopping-cart"></i>
+            <ShoppingCart/>
           </button>
         </div>
       </div>

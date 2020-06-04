@@ -56,9 +56,9 @@ const ProductDetails = ({product}) => {
   return (
     <div className="product-details">
       <div className="details__content">
-        <div className="details__name">
+        <h4 className="details__name">
           {product.name}
-        </div>
+        </h4>
         <div className="details__style">
           {product.style}
         </div>
