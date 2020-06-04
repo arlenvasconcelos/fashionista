@@ -1,0 +1,15 @@
+.cart{
+  position: absolute;
+  z-index: 3;
+  width: 360px;
+  height: 100%;
+  right: 0;
+  top: 0;
+  background-color:#1D2224;
+}
+
+@media screen and (max-width: 450px) {
+  .cart {
+    width: 100%;
+  }
+}

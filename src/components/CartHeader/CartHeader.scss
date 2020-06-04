@@ -1,5 +1,11 @@
 .cart__header{
-  font-size: 2em;
   color: white;
-  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  margin: 16px 8px;
+  span{
+    font-size: 1.3em;
+    width: 100%;
+    text-align: center;
+  }
 }

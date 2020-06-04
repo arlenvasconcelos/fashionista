@@ -15,9 +15,11 @@ const Cart = () => {
 
   return (
     <Drawer open={cart.open}>
-      <CartHeader />
-      <CartDetails cart={cart}/>
-      <CartFooter />
+      <div className="cart">
+        <CartHeader />
+        <CartDetails cart={cart}/>
+        <CartFooter />
+      </div>
     </Drawer>
   )
 }
