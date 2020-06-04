@@ -7,7 +7,18 @@
   .footer__content{
     color: white;
     padding: 16px;
-
+    & > *{
+      display: flex;
+      justify-content: space-between;
+      margin: 8px 0;
+    }
+    .content__row{
+      color: black;
+    }
+    .content__row--total{
+      color: white;
+      font-size: 1.3em;
+    }
   }
 
   button{

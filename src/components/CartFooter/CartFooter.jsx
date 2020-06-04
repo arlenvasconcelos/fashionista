@@ -9,6 +9,7 @@ const CartFooter = () => {
 
   const [totalActualPrice, setTotalActualPrice] = useState(0);
   const [totalRegularPrice, setTotalRegularPrice] = useState(0);
+  const [quantity, setQuantity] = useState(0);
 
   const formattingValue = (value) => {
     const v = value.toString()
@@ -39,12 +40,22 @@ const CartFooter = () => {
     }
   },[cart])
 
+  useEffect(() => {
+    setQuantity(
+      cart.items.reduce((acc, item) => {
+        return acc + item.quantity
+      }, 0)
+    );
+    
+  },[cart])
+
   return (
     <div className="cart__footer">
       <div className="footer__content">
+        <p className="content__row">Quantidade de items: <span>{quantity}</span></p>
         <p className="content__row">Total: <span>{formattingValue(totalRegularPrice)}</span></p>
-        <p>Desconto: {formattingValue(totalRegularPrice - totalActualPrice)}</p>
-        <p>Total com Desconto: {formattingValue(totalActualPrice)}</p>
+        <p className="content__row">Desconto: <span>{formattingValue(totalRegularPrice - totalActualPrice)}</span></p>
+        <p className="content__row--total">Total com Desconto: <span>{formattingValue(totalActualPrice)}</span></p>
       </div>
       <button>
         CONCLUIR COMPRA
