@@ -17,15 +17,21 @@
 
   .topbar__icons{
     display: flex;
-    justify-content: space-between;
-    i:hover {
+    .icon{
+      display: flex;
+      justify-content: flex-end;
+    }
+    
+    .icon:hover {
       color: #FF324D;
+      justify-content: flex-end;
     }
   }
   
   .topbar__content{
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
 
   
