@@ -4,7 +4,8 @@
   display: flex;
   padding: 16px;
   margin: auto;
-  height: calc(100vh - 80px);
+  height: 100%;
+  max-height: calc(100vh - 112px);
   & > div {
     min-width: 50%;
   }

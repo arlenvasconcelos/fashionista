@@ -1,6 +1,6 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {useDispatch} from 'react-redux';
-import {closeCart, addItem, decreaseItem, removeItem} from '../../store/actions/cart';
+import {addItem, decreaseItem, removeItem} from '../../store/actions/cart';
 
 import ProductImage from '../ProductImage';
 
@@ -9,10 +9,6 @@ import './CartDetails.scss';
 const CartDetails = ({cart}) => {
 
   const dispatch = useDispatch();
-
-  const handleClickBackButton = () => {
-    dispatch(closeCart())
-  }
 
   const handleDecreaseItem = (item) => {
     if (item.quantity > 1){
@@ -33,9 +29,11 @@ const CartDetails = ({cart}) => {
 
   return (
     <div className="cart__details">
-      <button onClick={handleClickBackButton} className="cart__button__back">
-        <i class="fas fa-arrow-right"></i>
-      </button>
+      {/* <div>
+        <button onClick={handleCloseCart} className="cart__button__back">
+          <i class="fas fa-arrow-right"></i>
+        </button>
+      </div> */}
       {
         cart.items && cart.items.map((item) => (
           <div className="cart__item">
