@@ -1,17 +1,29 @@
 import React, {useEffect, useState} from 'react';
 import { Link } from 'react-router-dom';
 import {Search, ShoppingCart} from 'react-feather';
-import {useSelector} from 'react-redux'
+
+import {useSelector, useDispatch} from 'react-redux';
+import {openCart, closeCart} from '../../store/actions/cart';
 
 import Notification from '../Notification';
 
 import './TopBar.scss';
 
-export default ({closeCart}) => {
+export default () => {
 
   const {cart} = useSelector(state => state);
 
+  const dispatch = useDispatch();
+
   const [quantity, setQuantity] = useState(0);
+
+  const handleCartOpen = () => {
+    dispatch(openCart())
+  }
+
+  const handleCartClose = () => {
+    dispatch(closeCart())
+  }
 
   useEffect(() => {
     setQuantity(
@@ -19,7 +31,6 @@ export default ({closeCart}) => {
         return acc + item.quantity
       }, 0)
     );
-    
   },[cart])
 
   return (
@@ -35,7 +46,7 @@ export default ({closeCart}) => {
             <button className="icon" >
               <Search/>
             </button>
-            <button className="icon" onClick={closeCart}>
+            <button className="icon" onClick={cart.open ? handleCartClose : handleCartOpen}>
               {
                 cart.items.length 
                   ? <Notification value={quantity}/>
