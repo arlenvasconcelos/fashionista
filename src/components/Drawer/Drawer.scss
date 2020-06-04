@@ -1,16 +1,16 @@
 .drawer{
-  right: 0;
   height: calc(100vh - 80px);
-  background-color: #1D2224;
-  position: absolute;
   width: 360px;
+  position: fixed;
   z-index: 2;
-
-  transition: all .5s ease-in-out;
+  right: 0;
+  background-color:#1D2224;
+  overflow-x: hidden;
+  transition: 0.5s;
 }
 
 .inactive {
-  right: -400px;
+  width: 0px;
 }
 
 @media screen and (max-width: 450px) {

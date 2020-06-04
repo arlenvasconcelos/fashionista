@@ -13,6 +13,7 @@ const Cart = () => {
 
   const {cart} = useSelector(state => state);
 
+  console.log(cart)
   return (
     <Drawer open={cart.open}>
       <CartHeader />
