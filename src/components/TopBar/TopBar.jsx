@@ -4,10 +4,12 @@ import {ShoppingCart} from 'react-feather';
 
 import {useSelector, useDispatch} from 'react-redux';
 import {openCart} from '../../store/actions/cart';
+import {handleShowFilter} from '../../store/actions/products';
 
 import Notification from '../Notification';
 
 import './TopBar.scss';
+import NavSearch from '../NavSearch';
 
 export default () => {
 
@@ -16,6 +18,12 @@ export default () => {
   const dispatch = useDispatch();
 
   const [quantity, setQuantity] = useState(0);
+  const [showInput, setShowInput] =  useState(false);
+
+  const handleShowInput = () => {
+    setShowInput(!showInput)
+    dispatch(handleShowFilter())
+  }
 
   const handleCartButton = () => {
     console.log('oi')
@@ -40,6 +48,11 @@ export default () => {
             </div>
           </Link>
           <div className="topbar__icons">
+            <NavSearch 
+              onTopbar={true} 
+              handleShowInput={handleShowInput}
+              showInput={showInput}
+            />
             <button className="icon" onClick={handleCartButton}>
               {
                 cart.items.length 

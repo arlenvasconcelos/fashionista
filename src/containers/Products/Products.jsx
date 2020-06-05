@@ -1,11 +1,23 @@
-import React from 'react';
+import React, {useState} from 'react';
+
+import {useDispatch} from 'react-redux';
+import {handleShowFilter} from '../../store/actions/products';
 
 import Product from '../../components/Product';
-
-import './Products.scss'
 import NavSearch from '../../components/NavSearch';
 
+import './Products.scss'
+
 const Products = ({products, openedFilter}) => {
+
+  const dispatch = useDispatch();
+
+  const [showInput, setShowInput] =  useState(false);
+
+  const handleShowInput = () => {
+    setShowInput(!showInput)
+    dispatch(handleShowFilter())
+  }
 
   return (
     <>
@@ -21,7 +33,10 @@ const Products = ({products, openedFilter}) => {
               ? <p>Desculpe. Não encontramos nenhum produto com esse nome.</p>
               : <></>
           }
-          <NavSearch/>
+          <NavSearch 
+            showInput={showInput} 
+            handleShowInput={handleShowInput}
+          />
         </div>
       </div>
     </>
