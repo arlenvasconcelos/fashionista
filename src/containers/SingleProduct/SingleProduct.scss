@@ -2,23 +2,17 @@
   width: 100%;
   max-width: 888px;
   display: flex;
-  padding-top: 112px;
+  justify-content: space-around;
+  padding-top: 96px;
   margin: auto;
-  height: 100%;
-  max-height: calc(100vh - 112px);
+  min-height: 100vh;
   & > div {
-    min-width: 50%;
+    flex: 0 1 50%;
   }
 }
 @media screen and (max-width: 450px){
   .single-product{
     flex-direction: column;
-    padding: 0px;
-    padding-top: 90px;
-    max-height: 0;
-    & > div {
-      height: 50%;
-    }
   }
 
 } 
