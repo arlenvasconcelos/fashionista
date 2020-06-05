@@ -20,13 +20,6 @@
       color: white;
       padding: 8px;
 
-      p{
-        margin: 0;
-      }
-
-      .item__price{
-        margin-top: 16px;
-      }
 
       .item__header{
         display: flex;
@@ -44,13 +37,8 @@
 
       }
       .item__button{
-        margin-top: 16px;
-        margin-left: 8px;
-        margin-right: 8px;
-        padding-top: 4px;
-        padding-bottom: 4px;
-        padding-left: 8px;
-        padding-right: 8px;
+        margin: 0 8px;
+        padding: 4px 8px;
         font-weight: bold;
         background-color: #ff324d;
         border-radius: 5px;
