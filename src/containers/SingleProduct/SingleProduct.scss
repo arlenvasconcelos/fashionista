@@ -2,7 +2,6 @@
   width: 100%;
   max-width: 888px;
   display: flex;
-  justify-content: space-around;
   padding-top: 96px;
   margin: auto;
   min-height: 100vh;
@@ -12,7 +11,12 @@
 }
 @media screen and (max-width: 450px){
   .single-product{
-    flex-direction: column;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    & > div {
+      flex: 0;
+      height: calc(100vh/2 - 62px);
+    }
   }
 
 } 
