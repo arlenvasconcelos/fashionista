@@ -23,8 +23,6 @@ const ProductsRoutes = () => {
     .catch(err => console.log('Error at getProducts'))
     
   },[dispatch])
-
-  console.log(products)
   
   return (
     <>

@@ -26,7 +26,6 @@ export default () => {
   }
 
   const handleCartButton = () => {
-    console.log('oi')
     dispatch(openCart())
   }
 

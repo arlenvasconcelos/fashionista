@@ -25,8 +25,6 @@ const NavSearch = ({onTopbar, showInput, handleShowInput}) => {
 
     const filteredProducts = products.allProducts.filter(product => 
       product.name.toLowerCase().includes(query.toLowerCase()));
-    
-    console.log(filteredProducts)
 
     dispatch(setFilteredProducts(filteredProducts));
   }, [query])
