@@ -11,15 +11,8 @@ const CartFooter = () => {
   const [totalRegularPrice, setTotalRegularPrice] = useState(0);
 
   const formattingValue = (value) => {
-    const v = value.toString();
-    if (v.includes('.') && v.split('.')[1].length === 0)
-     return v + '00';
-    else if (v.includes('.') && v.split('.')[1].length === 1)
-     return v + '0';
-    else if (!v.includes('.'))
-      return v + '.00';
-    else
-      return v;
+    const v = value.toLocaleString('pt-br', {minimumFractionDigits: 2});
+    return v;
   }
 
   useEffect(() => {
@@ -33,7 +26,7 @@ const CartFooter = () => {
           acc[1] + parseFloat(regularPrice.toFixed(2))
         ];
       },[0, 0]);
-      
+
       setTotalActualPrice(values[0]);
       setTotalRegularPrice(values[1]);
     }
@@ -42,8 +35,6 @@ const CartFooter = () => {
       setTotalRegularPrice(0);
     }
   },[cart])
-
- 
 
   return (
     <div className="cart__footer">

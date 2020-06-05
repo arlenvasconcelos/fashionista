@@ -4,7 +4,7 @@ import {addItem, decreaseItem, removeItem} from '../../store/actions/cart';
 
 import { Trash } from 'react-feather';
 
-import ProductImage from '../ProductImage';
+import NoImage from '../NoImage';
 
 import './CartDetails.scss';
 
@@ -35,7 +35,11 @@ const CartDetails = ({cart}) => {
         cart.items && cart.items.map((item, key) => (
           <div key={key} className="cart__item">
             <div className="item__image">
-              <ProductImage path={item.image}/>
+              {
+                item.image 
+                  ? <img src={item.image} alt=""/>
+                  : <NoImage/>
+              }
             </div>
             <div className="item__details"> 
               <div className="item__header">
