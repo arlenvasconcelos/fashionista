@@ -1,16 +1,16 @@
 .cart__footer{
   background-color: #4A4E50;
-  position: absolute;
   bottom: 0px;
   width: 100%;
+  margin-top: auto;
 
   .footer__content{
     color: white;
-    padding: 16px;
+    padding: 0px 16px;
     & > *{
       display: flex;
       justify-content: space-between;
-      margin: 8px 0;
+      margin: 4px 0;
     }
     .content__row{
       color: black;

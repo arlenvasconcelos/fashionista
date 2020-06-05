@@ -1,4 +1,6 @@
 .cart{
+  display: flex;
+  flex-direction: column;
   position: absolute;
   z-index: 99;
   width: 360px;

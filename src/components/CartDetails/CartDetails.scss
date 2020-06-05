@@ -1,5 +1,9 @@
 .cart__details{
+  height: auto;
   padding: 16px;
+  overflow: hidden;
+  overflow-y: scroll;
+  
   .cart__item{
     background-color: rgba(255, 255, 255, 0.05);
     margin-bottom: 16px;

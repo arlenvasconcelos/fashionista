@@ -11,7 +11,7 @@ const CartFooter = () => {
   const [totalRegularPrice, setTotalRegularPrice] = useState(0);
 
   const formattingValue = (value) => {
-    const v = value.toString()
+    const v = value.toString();
     if (v.includes('.') && v.split('.')[1].length === 0)
      return v + '00';
     else if (v.includes('.') && v.split('.')[1].length === 1)
@@ -19,7 +19,7 @@ const CartFooter = () => {
     else if (!v.includes('.'))
       return v + '.00';
     else
-      return v
+      return v;
   }
 
   useEffect(() => {
@@ -28,16 +28,22 @@ const CartFooter = () => {
         let actualPrice = item.quantity * parseFloat(item.actual_price.split(' ')[1].replace(',','.'));
         let regularPrice = item.quantity * parseFloat(item.regular_price.split(' ')[1].replace(',','.'));
         
-        return {
-          totalActualPrice: acc.totalActualPrice + actualPrice,
-          totalRegularPrice: acc.totalRegularPrice + regularPrice,
-        };
-      }, {totalActualPrice: 0, totalRegularPrice: 0});
- 
-      setTotalActualPrice(values.totalActualPrice);
-      setTotalRegularPrice(values.totalRegularPrice);
+        return [
+          acc[0] + parseFloat(actualPrice.toFixed(2)), 
+          acc[1] + parseFloat(regularPrice.toFixed(2))
+        ];
+      },[0, 0]);
+      
+      setTotalActualPrice(values[0]);
+      setTotalRegularPrice(values[1]);
+    }
+    else {
+      setTotalActualPrice(0);
+      setTotalRegularPrice(0);
     }
   },[cart])
+
+ 
 
   return (
     <div className="cart__footer">
