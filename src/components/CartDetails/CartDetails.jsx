@@ -48,8 +48,8 @@ const CartDetails = ({cart}) => {
                   <Trash size={16}/>
                 </button>
               </div>
-              <div className="item__size">Tam: {item.selected_size}</div>
-              <div className="item__installments">{item.installments} sem juros</div>
+              <p className="item__size">Tam: {item.selected_size}</p>
+              <p className="item__price">{item.actual_price}</p>
               <div>
                 <button 
                   className="item__button"
