@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import { Link } from 'react-router-dom';
-import {Search, ShoppingCart} from 'react-feather';
+import {ShoppingCart} from 'react-feather';
 
 import {useSelector, useDispatch} from 'react-redux';
 import {openCart} from '../../store/actions/cart';
@@ -18,6 +18,7 @@ export default () => {
   const [quantity, setQuantity] = useState(0);
 
   const handleCartButton = () => {
+    console.log('oi')
     dispatch(openCart())
   }
 
@@ -39,9 +40,6 @@ export default () => {
             </div>
           </Link>
           <div className="topbar__icons">
-            <button className="icon" >
-              <Search/>
-            </button>
             <button className="icon" onClick={handleCartButton}>
               {
                 cart.items.length 

@@ -18,15 +18,10 @@ const productsReducer = (state = defaultState, action) => {
         ...state,
         filteredProducts: action.payload,
       }
-    case TYPES.OPEN_FILTER:
+    case TYPES.HANDLE_SHOW_FILTER:
       return {
         ...state,
-        openedFilter: true,
-      }
-    case TYPES.CLOSE_FILTER:
-      return {
-        ...state,
-        openedFilter: false,
+        openedFilter: !state.openedFilter,
       }
     default:
       return state;

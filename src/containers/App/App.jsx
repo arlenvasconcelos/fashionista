@@ -14,7 +14,6 @@ function App() {
       <Router>
         <TopBar />
         <Cart/>
-        {/* <Drawer/> */}
         <Routes/>
       </Router>
     </div>

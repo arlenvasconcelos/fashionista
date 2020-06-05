@@ -23,12 +23,17 @@ const ProductsRoutes = () => {
     .catch(err => console.log('Error at getProducts'))
     
   },[dispatch])
+
+  console.log(products)
   
   return (
     <>
       {
-        products.allProducts.length 
-          ? <Products products={ products.openFilter ? products.filteredProducts : products.allProducts }/>
+        products.allProducts.length
+          ? <Products
+              openedFilter={products.openedFilter}
+              products={ products.openedFilter ? products.filteredProducts : products.allProducts }
+            />
           : <Loading/>
       }
     </>

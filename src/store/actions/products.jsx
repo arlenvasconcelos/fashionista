@@ -1,8 +1,7 @@
 const TYPES = {
   SET_ALL_PRODUCTS: 'SET_ALL_PRODUCTS',
   SET_FILTERED_PRODUCTS: 'SET_FILTERED_PRODUCTS',
-  OPEN_FILTER: 'OPEN_FILTER',
-  CLOSE_FILTER: 'CLOSE_FILTER',
+  HANDLE_SHOW_FILTER: 'HANDLE_SHOW_FILTER',
 }
 
 const setAllProducts = (data) => {
@@ -17,15 +16,10 @@ const setFilteredProducts = (data) => {
     payload: data,
   })
 }
-const openFilter = () => {
+const handleShowFilter = () => {
   return ({
-    type: TYPES.OPEN_FILTER,
-  })
-}
-const closeFilter = () => {
-  return ({
-    type: TYPES.CLOSE_FILTER,
+    type: TYPES.HANDLE_SHOW_FILTER,
   })
 }
 
-export {TYPES, setAllProducts, setFilteredProducts, openFilter, closeFilter}
+export {TYPES, setAllProducts, setFilteredProducts, handleShowFilter}

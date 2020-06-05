@@ -3,8 +3,9 @@ import React from 'react';
 import Product from '../../components/Product';
 
 import './Products.scss'
+import NavSearch from '../../components/NavSearch';
 
-const Products = ({products}) => {
+const Products = ({products, openedFilter}) => {
 
   return (
     <>
@@ -15,6 +16,12 @@ const Products = ({products}) => {
               <Product key={key} product={product}/>
             ))
           }
+          {
+            !products.length && openedFilter
+              ? <p>Desculpe. Não encontramos nenhum produto com esse nome.</p>
+              : <></>
+          }
+          <NavSearch/>
         </div>
       </div>
     </>
