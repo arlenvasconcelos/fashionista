@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from "react-redux";
-import {setProducts as setProductsAction} from '../../store/actions/products';
+import {setAllProducts} from '../../store/actions/products';
 
 //components
 import Products from '../../containers/Products';
@@ -18,7 +18,7 @@ const ProductsRoutes = () => {
   useEffect(() => {
     getProducts()
     .then(data => {
-      dispatch(setProductsAction(data));
+      dispatch(setAllProducts(data));
     })
     .catch(err => console.log('Error at getProducts'))
     
@@ -27,8 +27,8 @@ const ProductsRoutes = () => {
   return (
     <>
       {
-        products.length 
-          ? <Products products={products}/>
+        products.allProducts.length 
+          ? <Products products={ products.openFilter ? products.filteredProducts : products.allProducts }/>
           : <Loading/>
       }
     </>

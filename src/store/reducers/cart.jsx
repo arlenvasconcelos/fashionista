@@ -1,6 +1,11 @@
 import {TYPES} from '../actions/cart';
 
-const cartReducer = (state = {items: [], open: false}, action) => {
+const defaultState = {
+  items: [],
+  open: false
+}
+
+const cartReducer = (state = defaultState, action) => {
   switch (action.type) {
     case TYPES.UPDATE_ITEMS:
       return {

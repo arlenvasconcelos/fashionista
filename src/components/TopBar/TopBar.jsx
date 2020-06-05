@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import {Search, ShoppingCart} from 'react-feather';
 
 import {useSelector, useDispatch} from 'react-redux';
-import {openCart, closeCart} from '../../store/actions/cart';
+import {openCart} from '../../store/actions/cart';
 
 import Notification from '../Notification';
 

@@ -12,10 +12,10 @@ const SingleProductRoute = () => {
   const [product, setProduct] = useState({});
 
   useEffect(() => {
-    setProduct(products.find(p => p.style + '-' + p.name.toLowerCase().trim().replace(/ /g, '-') === name));
+    setProduct(products.allProducts.find(p => p.style + '-' + p.name.toLowerCase().trim().replace(/ /g, '-') === name));
   },[products, name])
 
-  if (!products.length){
+  if (!products.allProducts.length){
     return <Redirect to="/" />
   }
   
