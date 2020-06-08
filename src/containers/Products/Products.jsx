@@ -30,7 +30,11 @@ const Products = ({products, openedFilter}) => {
           }
           {
             !products.length && openedFilter
-              ? <p>Desculpe. Não encontramos nenhum produto com esse nome.</p>
+              ? <div className="products__no-product">
+                  <p>
+                    Desculpe. Não encontramos nenhum produto com esse nome.
+                  </p>
+                </div>
               : <></>
           }
           <NavSearch 

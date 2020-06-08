@@ -10,7 +10,7 @@ const Product = ({product}) => {
 
   return (
     <>
-      <div className="product">
+      <div className={`product ${product.image ? '' : 'no-image' }`}>
         <Link 
           to={`/produto/${product.style}-${product.name.toLowerCase().trim().replace(/ /g, '-')}`}
         >
