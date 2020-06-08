@@ -29,7 +29,10 @@ const CartHeader = () => {
 
   return (
     <div className="cart__header">
-      <button onClick={handleCloseCart} >
+      <button 
+        name="fechar carrinho"
+        onClick={handleCloseCart}
+      >
         <ArrowRight/>
       </button>
       <span>Carrinho ({quantity})</span>

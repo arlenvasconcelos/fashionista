@@ -43,7 +43,7 @@ const CartFooter = () => {
         <p className="content__row">Desconto: <span>{formattingValue(totalRegularPrice - totalActualPrice)}</span></p>
         <p className="content__row--total">Total com desconto: <span>{formattingValue(totalActualPrice)}</span></p>
       </div>
-      <button>
+      <button name="concluir compra">
         CONCLUIR COMPRA
       </button>
     </div>

@@ -52,7 +52,11 @@ export default () => {
               handleShowInput={handleShowInput}
               showInput={showInput}
             />
-            <button className="icon" onClick={handleCartButton}>
+            <button
+              className="icon"
+              name="abrir carrinho"
+              onClick={handleCartButton}
+            >
               {
                 cart.items.length 
                   ? <Notification value={quantity}/>

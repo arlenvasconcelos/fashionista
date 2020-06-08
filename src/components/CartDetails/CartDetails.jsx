@@ -44,7 +44,10 @@ const CartDetails = ({cart}) => {
             <div className="item__details"> 
               <div className="item__header">
                 <h4>{item.name}</h4>
-                <button onClick={() => handleRemoveItem(item)}>
+                <button
+                  name="remover item"
+                  onClick={() => handleRemoveItem(item)}
+                >
                   <Trash size={16}/>
                 </button>
               </div>
@@ -53,13 +56,15 @@ const CartDetails = ({cart}) => {
               <div>
                 <button 
                   className="item__button"
+                  name="diminuir quantidade"
                   onClick={() => handleDecreaseItem(item)}
                 >
                   -
                 </button>
                 {item.quantity}
-                <button 
+                <button
                   className="item__button"
+                  name="aumentar quantidade"
                   onClick={() => handleAddItem(item)}
                 >
                   +
