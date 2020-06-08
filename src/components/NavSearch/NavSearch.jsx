@@ -53,7 +53,7 @@ const NavSearch = ({onTopbar, showInput, handleShowInput}) => {
         )
       }
       <div className='navsearch__icon'>
-        <button name="pesquisar" onClick={handleButtonClick}>
+        <button onClick={handleButtonClick}>
           {showInput ? <X/> : <Search/>}
         </button>
       </div>

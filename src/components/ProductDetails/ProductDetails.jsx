@@ -67,8 +67,7 @@ const ProductDetails = ({product}) => {
           {
             product.sizes && product.sizes.map((item, key) => (
               <button 
-                key={key}
-                name={`tamanho ${item.size}`}
+                key={key} 
                 disabled={!item.available}
                 onClick={() => handleSize(item.size)}
                 className={selectedSize === item.size ? `sizes__item selected` : `sizes__item`}
@@ -87,9 +86,8 @@ const ProductDetails = ({product}) => {
           {product.installments ? `${product.installments} sem juros` : ''} 
         </div>
         
-        <button
+        <button 
           className="details__button"
-          name="comprar"
           onClick={handleAddItem}
         >
           COMPRAR
