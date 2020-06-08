@@ -4,7 +4,7 @@ import {useDispatch} from 'react-redux'
 import {openCart, addItem} from '../../store/actions/cart';
 
 import './ProductDetails.scss';
-import ProductPrice from '../ProductPrice';
+import ProductPrice from '../ProductPrice/ProductPrice';
 
 const ProductDetails = ({product}) => {
 

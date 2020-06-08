@@ -1,6 +1,5 @@
 import React from 'react';
-import ProductImage from '../../components/ProductImage';
-import ProductDetails from '../../components/ProductDetails';
+import {ProductImage, ProductDetails} from '../../components'
 
 import './SingleProduct.scss';
 

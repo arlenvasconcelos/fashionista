@@ -1,8 +1,8 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
-import ProductPrice from '../ProductPrice';
-import NoImage from '../NoImage';
+import ProductPrice from '../ProductPrice/ProductPrice';
+import NoImage from '../NoImage/NoImage';
 
 import './Product.scss'
 

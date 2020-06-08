@@ -1,7 +1,7 @@
 import React from 'react';
 
 import './ProductImage.scss'
-import NoImage from '../NoImage';
+import NoImage from '../NoImage/NoImage';
 
 const ProductImage = ({path}) => {
   return (

@@ -3,8 +3,7 @@ import React, {useState} from 'react';
 import {useDispatch} from 'react-redux';
 import {handleShowFilter} from '../../store/actions/products';
 
-import Product from '../../components/Product';
-import NavSearch from '../../components/NavSearch';
+import {Product, NavSearch} from '../../components';
 
 import './Products.scss'
 

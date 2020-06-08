@@ -1,13 +1,11 @@
 import React, {useRef, useEffect} from 'react';
+
 import {useSelector, useDispatch} from 'react-redux';
 import {closeCart} from '../../store/actions/cart'
 
-import './Cart.scss';
+import {Drawer, CartDetails, CartHeader, CartFooter} from '../../components';
 
-import Drawer from '../../components/Drawer';
-import CartDetails from '../../components/CartDetails';
-import CartHeader from '../../components/CartHeader';
-import CartFooter from '../../components/CartFooter';
+import './Cart.scss';
 
 const Cart = () => {
 
@@ -15,7 +13,7 @@ const Cart = () => {
 
   const {cart} = useSelector(state => state);
 
-  useOutsideAlerter(wrapperRef, cart.open);
+  useOutsideClick(wrapperRef, cart.open);
   
   return (
     <Drawer open={cart.open}>
@@ -28,7 +26,7 @@ const Cart = () => {
   )
 }
 
-function useOutsideAlerter(ref, open) {
+function useOutsideClick(ref, open) {
   const dispatch = useDispatch();
 
   useEffect(() => {

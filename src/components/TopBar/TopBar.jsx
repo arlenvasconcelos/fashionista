@@ -6,10 +6,10 @@ import {useSelector, useDispatch} from 'react-redux';
 import {openCart} from '../../store/actions/cart';
 import {handleShowFilter} from '../../store/actions/products';
 
-import Notification from '../Notification';
+import Notification from '../Notification/Notification';
+import NavSearch from '../NavSearch/NavSearch';
 
 import './TopBar.scss';
-import NavSearch from '../NavSearch';
 
 export default () => {
 

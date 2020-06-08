@@ -4,7 +4,7 @@ import {addItem, decreaseItem, removeItem} from '../../store/actions/cart';
 
 import { Trash } from 'react-feather';
 
-import NoImage from '../NoImage';
+import NoImage from '../NoImage/NoImage';
 
 import './CartDetails.scss';
 

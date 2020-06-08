@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import {useParams, Redirect} from 'react-router-dom'
 import { useSelector } from 'react-redux';
 
-import SingleProduct from '../../containers/SingleProduct';
+import {SingleProduct} from '../../containers';
 
 const SingleProductRoute = () => {
 
