@@ -4,7 +4,7 @@ import {BrowserRouter as Router} from 'react-router-dom';
 import './App.scss';
 
 import Routes from '../../routes';
-import {TopBar} from '../../components';
+import {TopBar, Footer} from '../../components';
 import Cart from '../Cart/Cart';
 
 function App() {

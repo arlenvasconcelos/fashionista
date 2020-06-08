@@ -8,6 +8,8 @@ import './Product.scss'
 
 const Product = ({product}) => {
 
+  console.log(product)
+
   return (
     <>
       <section className={`product ${product.image ? '' : 'no-image' }`}>
