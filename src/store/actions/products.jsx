@@ -1,7 +1,7 @@
 const TYPES = {
   SET_ALL_PRODUCTS: 'SET_ALL_PRODUCTS',
   SET_FILTERED_PRODUCTS: 'SET_FILTERED_PRODUCTS',
-  HANDLE_SHOW_FILTER: 'HANDLE_SHOW_FILTER',
+  TOOGLE_SHOW_FILTER: 'HANDLE_SHOW_FILTER',
 }
 
 const setAllProducts = (data) => {
@@ -16,10 +16,10 @@ const setFilteredProducts = (data) => {
     payload: data,
   })
 }
-const handleShowFilter = () => {
+const toogleShowFilter = () => {
   return ({
-    type: TYPES.HANDLE_SHOW_FILTER,
+    type: TYPES.TOOGLE_SHOW_FILTER,
   })
 }
 
-export {TYPES, setAllProducts, setFilteredProducts, handleShowFilter}
+export {TYPES, setAllProducts, setFilteredProducts, toogleShowFilter}

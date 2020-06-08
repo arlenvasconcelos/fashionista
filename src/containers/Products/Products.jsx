@@ -1,9 +1,11 @@
 import React, {useState} from 'react';
 
 import {useDispatch} from 'react-redux';
-import {handleShowFilter} from '../../store/actions/products';
+import {toogleShowFilter} from '../../store/actions/products';
 
+import { AlertTriangle } from 'react-feather';
 import {Product, NavSearch} from '../../components';
+
 
 import './Products.scss'
 
@@ -15,13 +17,13 @@ const Products = ({products, openedFilter}) => {
 
   const handleShowInput = () => {
     setShowInput(!showInput)
-    dispatch(handleShowFilter())
+    dispatch(toogleShowFilter())
   }
 
   return (
     <>
       <div className="container">
-        <div className="products">
+        <main className="products">
           {
             products.map((product, key) => (
               <Product key={key} product={product}/>
@@ -30,9 +32,8 @@ const Products = ({products, openedFilter}) => {
           {
             !products.length && openedFilter
               ? <div className="products__no-product">
-                  <p>
-                    Desculpe. Não encontramos nenhum produto com esse nome.
-                  </p>
+                  <AlertTriangle/>
+                  <p>Desculpe. Não encontramos nenhum produto com esse nome.</p>
                 </div>
               : <></>
           }
@@ -40,7 +41,7 @@ const Products = ({products, openedFilter}) => {
             showInput={showInput} 
             handleShowInput={handleShowInput}
           />
-        </div>
+        </main>
       </div>
     </>
   )

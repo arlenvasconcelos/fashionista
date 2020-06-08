@@ -6,7 +6,7 @@ import {setAllProducts} from '../../store/actions/products';
 import {Products} from '../../containers';
 import {Loading} from '../../components';
 
-import {getProducts} from '../../service/api'
+import {getProducts}from '../../service/api'
 
 const ProductsRoutes = () => {
 
@@ -29,7 +29,10 @@ const ProductsRoutes = () => {
         products.allProducts.length
           ? <Products
               openedFilter={products.openedFilter}
-              products={ products.openedFilter ? products.filteredProducts : products.allProducts }
+              products={ products.openedFilter 
+                ? products.filteredProducts 
+                : products.allProducts
+              }
             />
           : <Loading/>
       }

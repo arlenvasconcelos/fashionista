@@ -4,7 +4,7 @@ import {ShoppingCart} from 'react-feather';
 
 import {useSelector, useDispatch} from 'react-redux';
 import {openCart} from '../../store/actions/cart';
-import {handleShowFilter} from '../../store/actions/products';
+import {toogleShowFilter} from '../../store/actions/products';
 
 import Notification from '../Notification/Notification';
 import NavSearch from '../NavSearch/NavSearch';
@@ -22,7 +22,7 @@ export default () => {
 
   const handleShowInput = () => {
     setShowInput(!showInput)
-    dispatch(handleShowFilter())
+    dispatch(toogleShowFilter())
   }
 
   const handleCartButton = () => {

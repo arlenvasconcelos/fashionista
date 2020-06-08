@@ -1,11 +1,7 @@
 import React from 'react';
 
-const Loading = () => {
-  return (
-    <>
-      Carregando...
-    </>
-  )
-}
+import './Loading.scss';
+
+const Loading = () => (<div className="loading"/>)
 
 export default Loading

@@ -7,10 +7,10 @@ const SingleProduct = ({product}) => {
 
   return (
     <div className="container">
-      <div className="single-product">
+      <main className="single-product">
         <ProductImage path={product.image}/>
         <ProductDetails product={product}/>
-      </div>
+      </main>
     </div>
   )
 }

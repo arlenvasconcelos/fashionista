@@ -3,6 +3,10 @@
   align-items: center;
   width: 100%;
 
+  & p{
+    margin: 0px;
+  } 
+
   .details__content{
     margin-left: 64px;
     font-size: 1.2em;

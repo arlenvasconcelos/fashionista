@@ -8,11 +8,13 @@ import './Product.scss'
 
 const Product = ({product}) => {
 
+  console.log(product)
+
   return (
     <>
-      <div className={`product ${product.image ? '' : 'no-image' }`}>
+      <section className={`product ${product.image ? '' : 'no-image' }`}>
         <Link 
-          to={`/produto/${product.style}-${product.name.toLowerCase().trim().replace(/ /g, '-')}`}
+          to={`/produto/${product.code_color}`}
         >
           <div className="product__content">
             {
@@ -21,7 +23,7 @@ const Product = ({product}) => {
                 : <NoImage/>
             }
             { product.on_sale 
-                ? <div className="price__off">{'- ' + product.discount_percentage}</div>
+                ? <div className="price__off">{`- ${product.discount_percentage}`}</div>
                 : <></>
             }
             <div className="product__footer">
@@ -36,7 +38,7 @@ const Product = ({product}) => {
             </div>
           </div>
         </Link>
-      </div>
+      </section>
     </>
   )
 }

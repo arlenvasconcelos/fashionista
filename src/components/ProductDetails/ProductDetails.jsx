@@ -57,12 +57,12 @@ const ProductDetails = ({product}) => {
         <h4 className="details__name">
           {product.name}
         </h4>
-        <div className="details__style">
-          {product.style}
-        </div>
-        <div className="details__color">
+        <p className="details__style">
+          Ref:{product.code_color}
+        </p>
+        <p className="details__color">
           Cor: {product.color ? product.color.charAt(0)+ product.color.slice(1).toLowerCase() : '' }
-        </div>
+        </p>
         <div className="details__sizes">
           {
             product.sizes && product.sizes.map((item, key) => (

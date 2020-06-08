@@ -11,7 +11,6 @@ const ProductImage = ({path}) => {
           ? <img src={path} alt=""/>
           : <NoImage/>
       }
-      
     </div>
   )
 }
