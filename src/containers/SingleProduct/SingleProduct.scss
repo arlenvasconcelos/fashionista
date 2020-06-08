@@ -8,12 +8,17 @@
   & > div {
     flex: 0 1 50%;
   }
+  &__icon{
+    margin: 0 8px;
+    margin-bottom: 8px;
+    align-self: start;
+  }
 }
 @media screen and (max-width: 450px){
   .single-product{
     flex-flow: column nowrap;
     justify-content: space-between;
-    & > div {
+    .product-image .product-details {
       flex: 0;
       height: calc(100vh/2 - 62px);
     }

@@ -31,7 +31,7 @@ const NavSearch = ({onTopbar, showInput, handleShowInput}) => {
       product.name.toLowerCase().includes(query.toLowerCase()));
 
     dispatch(setFilteredProducts(filteredProducts));
-  }, [query])
+  }, [query, products.allProducts, dispatch])
 
   return (
   <>  
