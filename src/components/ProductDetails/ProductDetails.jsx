@@ -82,19 +82,20 @@ const ProductDetails = ({product}) => {
           actualPrice={product.actual_price}
           onSale={product.on_sale}
         />
-        <div className="details__installments">
+        <p className="details__installments">
           {product.installments ? `${product.installments} sem juros` : ''} 
+        </p>
+        <div className="details__button">
+          <button
+            onClick={handleAddItem}
+          >
+            COMPRAR
+          </button>
+          {
+            error.status ? <span className="details__button-error">{error.message}</span> :  <></>
+          }
         </div>
         
-        <button 
-          className="details__button"
-          onClick={handleAddItem}
-        >
-          COMPRAR
-        </button>
-        {
-          error.status ? <span className="details__error">{error.message}</span> :  <></>
-        }
       </div>
     </div>
   )

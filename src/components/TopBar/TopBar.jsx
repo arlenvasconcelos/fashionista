@@ -38,8 +38,8 @@ export default () => {
   },[cart])
 
   return (
-    <div className="container">
-      <header className="topbar">
+    <header className="topbar">
+      <div className="container">
         <div className="topbar__content">
           <Link to="/">
             <div className="topbar__logo">
@@ -62,7 +62,7 @@ export default () => {
             </button>
           </div>
         </div>
-      </header>
-    </div>
+      </div>
+    </header>
   )
 };

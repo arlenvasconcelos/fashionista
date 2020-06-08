@@ -11,10 +11,6 @@
     margin-left: 64px;
     font-size: 1.2em;
 
-    & > *{
-      margin-top: 16px;
-    }
-
     .details__name{
       margin-bottom: 0px;
     }
@@ -25,10 +21,12 @@
     }
 
     .details__color{
+      margin-top: 16px;
       font-size: 0.8em;
     }
 
     .details__sizes{
+      margin-top: 16px;
       display: flex;
       button {
         margin-right: 8px;
@@ -48,18 +46,26 @@
       }
     }
 
-    .details__button{
-      margin-top: 32px;
-      font-weight: bold;
-      padding: 8px;
-      background-color: #c6ff00;
+    .product__price{
+      margin-top: 16px;
     }
 
-    .details__error{
-      margin-left: 8px;
-      color: red;
-      font-size: 0.8em;
+    .details__button{
+      margin-top: 32px;
+      button{
+        font-weight: bold;
+        padding: 8px;
+        background-color: #c6ff00;
+        order: 1;
+      }
+      &-error{
+        margin-left: 8px;
+        color: red;
+        font-size: 0.8em;
+        order: 2;
+      }
     }
+
   }
 
 }
@@ -77,10 +83,20 @@
       }
 
       .details__button{
-        width: 100%;
+        display: flex;
+        flex-direction: column;
         margin-top: 32px;
-        font-weight: bold;
-        padding: 16px 8px;
+        button{
+          width: 100%;
+          font-weight: bold;
+          padding: 16px 8px;
+          order: 2;
+        }
+        
+
+        &-error{
+          order: 1;
+        }
       }
     }
 
