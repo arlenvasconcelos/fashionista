@@ -21,8 +21,12 @@ const NavSearch = ({onTopbar, showInput, handleShowInput}) => {
     setQuery(e.target.value);
   }
 
-  useEffect(() => {
+  const handleButtonClick = () => {
+    setQuery("");
+    handleShowInput()
+  }
 
+  useEffect(() => {
     const filteredProducts = products.allProducts.filter(product => 
       product.name.toLowerCase().includes(query.toLowerCase()));
 
@@ -49,8 +53,7 @@ const NavSearch = ({onTopbar, showInput, handleShowInput}) => {
         )
       }
       <div className='navsearch__icon'>
-        
-        <button onClick={handleShowInput}>
+        <button onClick={handleButtonClick}>
           {showInput ? <X/> : <Search/>}
         </button>
       </div>
