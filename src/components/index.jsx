@@ -11,9 +11,10 @@ import ProductDetails from './ProductDetails/ProductDetails';
 import ProductImage from './ProductImage/ProductImage';
 import ProductPrice from './ProductPrice/ProductPrice';
 import TopBar from './TopBar/TopBar';
+import Footer from './Footer/Footer';
 
 export {
   CartDetails, CartFooter, CartHeader, Drawer, Loading,
   NavSearch, NoImage, Notification, Product, ProductDetails, 
-  ProductImage, ProductPrice, TopBar,
+  ProductImage, ProductPrice, TopBar, Footer,
 }

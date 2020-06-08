@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 import {setAllProducts} from '../../store/actions/products';
 
 import {Products} from '../../containers';
-import {Loading} from '../../components';
+import {Loading, Footer} from '../../components';
 
 import {getProducts}from '../../service/api'
 
@@ -36,6 +36,7 @@ const ProductsRoutes = () => {
             />
           : <Loading/>
       }
+      <Footer stylePosition={`${products.allProducts.length ? 'relative' : 'fixed'}`}/>
     </>
   )
 }
