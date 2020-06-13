@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 
-import { openCart, addItem } from "../../store/actions/cart";
+import { addItem } from "../../store/actions/cart";
 
 import "./ProductDetails.scss";
 import ProductPrice from "../ProductPrice/ProductPrice";

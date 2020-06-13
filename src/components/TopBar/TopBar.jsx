@@ -1,68 +1,61 @@
-import React, {useEffect, useState} from 'react';
-import { Link } from 'react-router-dom';
-import {ShoppingCart} from 'react-feather';
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import { ShoppingCart } from "react-feather";
 
-import {useSelector, useDispatch} from 'react-redux';
-import {openCart} from '../../store/actions/cart';
-import {toogleShowFilter} from '../../store/actions/products';
+import { useSelector, useDispatch } from "react-redux";
+import { openCart } from "../../store/actions/cart";
+import { toogleShowFilter } from "../../store/actions/products";
 
-import Notification from '../Notification/Notification';
-import NavSearch from '../NavSearch/NavSearch';
+import Notification from "../Notification/Notification";
+import NavSearch from "../NavSearch/NavSearch";
 
-import './TopBar.scss';
+import "./TopBar.scss";
 
 export default () => {
-
-  const {cart} = useSelector(state => state);
+  const { cart } = useSelector((state) => state);
 
   const dispatch = useDispatch();
 
   const [quantity, setQuantity] = useState(0);
-  const [showInput, setShowInput] =  useState(false);
+  const [showInput, setShowInput] = useState(false);
 
   const handleShowInput = () => {
-    setShowInput(!showInput)
-    dispatch(toogleShowFilter())
-  }
+    setShowInput(!showInput);
+    dispatch(toogleShowFilter());
+  };
 
   const handleCartButton = () => {
-    dispatch(openCart())
-  }
+    dispatch(openCart());
+  };
 
   useEffect(() => {
     setQuantity(
       cart.items.reduce((acc, item) => {
-        return acc + item.quantity
+        return acc + item.quantity;
       }, 0)
     );
-  },[cart])
+  }, [cart]);
 
   return (
-    <header className="topbar">
+    <header className="topbar" data-testeid="topbar">
       <div className="container">
         <div className="topbar__content">
           <Link to="/">
-            <div className="topbar__logo">
-              FASHIONISTA
-            </div>
+            <div className="topbar__logo">FASHIONISTA</div>
           </Link>
           <div className="topbar__icons">
-            <NavSearch 
-              onTopbar={true} 
+            <NavSearch
+              onTopbar={true}
               handleShowInput={handleShowInput}
               showInput={showInput}
             />
             <button className="icon" onClick={handleCartButton}>
-              {
-                cart.items.length 
-                  ? <Notification value={quantity}/>
-                  : <></>
-              }
-              <ShoppingCart/>
+              {cart.items.length ? <Notification value={quantity} /> : <></>}
+              <ShoppingCart />
             </button>
           </div>
         </div>
       </div>
     </header>
-  )
+  );
 };

@@ -1,20 +1,19 @@
-import React from 'react';
-import {BrowserRouter as Router} from 'react-router-dom';
+import React from "react";
+import { BrowserRouter as Router } from "react-router-dom";
 
-import './App.scss';
+import "./App.scss";
 
-import Routes from '../../routes';
-import {TopBar} from '../../components';
-import Cart from '../Cart/Cart';
+import Routes from "../../routes";
+import { TopBar } from "../../components";
+import Cart from "../Cart/Cart";
 
 function App() {
- 
   return (
-    <div className="app">
+    <div className="app" data-testeid="app">
       <Router>
         <TopBar />
-        <Cart/>
-        <Routes/>
+        <Cart />
+        <Routes />
       </Router>
     </div>
   );
