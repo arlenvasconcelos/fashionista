@@ -22,16 +22,24 @@ const Products = ({ products, openedFilter }) => {
     <>
       <div className="container">
         <main className="products">
-          {products.map((product, key) => (
-            <Product key={key} product={product} />
-          ))}
-          {!products.length ? (
+          {products.length ? (
+            <>
+              <div className="products__quantity">
+                <p>{`${products.length} items`}</p>
+              </div>
+              <div className="products__items">
+                {products.map((product, key) => (
+                  <>
+                    <Product key={key} product={product} />
+                  </>
+                ))}
+              </div>
+            </>
+          ) : (
             <div className="products__noproduct">
               <AlertTriangle />
               <p>Desculpe. Não encontramos nenhum produto.</p>
             </div>
-          ) : (
-            <></>
           )}
           <NavSearch showInput={showInput} handleShowInput={handleShowInput} />
         </main>

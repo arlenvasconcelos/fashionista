@@ -1,7 +1,15 @@
 .products {
   padding-top: 83px;
-  display: flex;
-  flex-wrap: wrap;
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__quantity {
+    padding-left: 8px;
+    p {
+      color: #555;
+    }
+  }
   &__noproduct {
     display: flex;
     height: calc(100vh - 120px);

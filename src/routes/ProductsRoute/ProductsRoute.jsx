@@ -27,8 +27,6 @@ const ProductsRoutes = () => {
     loadProducts();
   }, [dispatch, setLoading]);
 
-  console.log(products);
-
   return (
     <>
       {!loading ? (
