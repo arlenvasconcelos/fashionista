@@ -1,44 +1,57 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from "react";
 
 import { useSelector, useDispatch } from "react-redux";
-import {setAllProducts} from '../../store/actions/products';
+import { setAllProducts, setErrorMessage } from "../../store/actions/products";
 
-import {Products} from '../../containers';
-import {Loading, Footer} from '../../components';
+import { Products } from "../../containers";
+import { Loading, Footer, Error } from "../../components";
 
-import {getProducts}from '../../service/api'
+import { getProducts } from "../../service/api";
 
 const ProductsRoutes = () => {
-
   const dispatch = useDispatch();
+  const { products } = useSelector((state) => state);
 
-  const {products} = useSelector(state => state);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    getProducts()
-    .then(data => {
-      dispatch(setAllProducts(data));
-    })
-    .catch(err => console.log('Error at getProducts'))
-    
-  },[dispatch])
-  
+    const loadProducts = async () => {
+      const data = await getProducts();
+      if (data.error) {
+        dispatch(setErrorMessage(data.error.message));
+      } else {
+        dispatch(setAllProducts(data));
+      }
+      setLoading(false);
+    };
+    loadProducts();
+  }, [dispatch, setLoading]);
+
+  console.log(products);
+
   return (
     <>
-      {
-        products.allProducts.length
-          ? <Products
-              openedFilter={products.openedFilter}
-              products={ products.openedFilter 
-                ? products.filteredProducts 
+      {!loading ? (
+        !products.errorStatus ? (
+          <Products
+            openedFilter={products.openedFilter}
+            products={
+              products.openedFilter
+                ? products.filteredProducts
                 : products.allProducts
-              }
-            />
-          : <Loading/>
-      }
-      <Footer stylePosition={`${products.allProducts.length ? 'relative' : 'fixed'}`}/>
+            }
+          />
+        ) : (
+          <Error />
+        )
+      ) : (
+        <Loading />
+      )}
+      <Footer
+        stylePosition={`${products.allProducts.length ? "relative" : "fixed"}`}
+      />
     </>
-  )
-}
+  );
+};
 
-export default ProductsRoutes
+export default ProductsRoutes;

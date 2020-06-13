@@ -37,7 +37,7 @@ export default () => {
   }, [cart]);
 
   return (
-    <header className="topbar" data-testeid="topbar">
+    <header className="topbar">
       <div className="container">
         <div className="topbar__content">
           <Link to="/">

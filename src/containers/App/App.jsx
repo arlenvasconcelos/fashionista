@@ -9,7 +9,7 @@ import Cart from "../Cart/Cart";
 
 function App() {
   return (
-    <div className="app" data-testeid="app">
+    <div className="app">
       <Router>
         <TopBar />
         <Cart />
