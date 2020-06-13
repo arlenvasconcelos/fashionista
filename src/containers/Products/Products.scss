@@ -1,11 +1,14 @@
-.products{
+.products {
   padding-top: 83px;
   display: flex;
   flex-wrap: wrap;
-  &__no-product{
+  &__noproduct {
     display: flex;
-    padding: 30px;
-    flex-direction: column;
+    height: calc(100vh - 120px);
+    justify-content: center;
+    width: 100%;
     align-items: center;
+    justify-content: center;
+    flex-direction: column;
   }
 }

@@ -5,6 +5,7 @@ const getProducts = () =>
     .then((response) => {
       if (response.ok) {
         return response.json();
+        // return [];
       } else {
         return {
           error: {

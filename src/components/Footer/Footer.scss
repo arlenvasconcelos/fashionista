@@ -1,4 +1,4 @@
-.footer{
+.footer {
   left: 0;
   bottom: 0;
   width: 100%;
@@ -6,12 +6,12 @@
   text-align: center;
   padding: 16px 0px;
   bottom: 0;
-  z-index: 5;
-  h3, p{
+  h3,
+  p {
     margin: 8px 0;
   }
-  &__icons{
-    & *{
+  &__icons {
+    & * {
       margin: 0 16px;
     }
   }
