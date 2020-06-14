@@ -1,30 +1,29 @@
-import React, {useRef, useEffect} from 'react';
+import React, { useRef, useEffect } from "react";
 
-import {useSelector, useDispatch} from 'react-redux';
-import {closeCart} from '../../store/actions/cart'
+import { useSelector, useDispatch } from "react-redux";
+import { closeCart } from "../../store/actions/cart";
 
-import {Drawer, CartDetails, CartHeader, CartFooter} from '../../components';
+import { Drawer, CartDetails, CartHeader, CartFooter } from "../../components";
 
-import './Cart.scss';
+import "./Cart.scss";
 
 const Cart = () => {
-
   const wrapperRef = useRef(null);
 
-  const {cart} = useSelector(state => state);
+  const { cart } = useSelector((state) => state);
 
   useOutsideClick(wrapperRef, cart.open);
-  
+
   return (
     <Drawer open={cart.open}>
       <div ref={wrapperRef} className="cart">
         <CartHeader />
-        <CartDetails cart={cart}/>
+        <CartDetails cart={cart} />
         <CartFooter />
       </div>
     </Drawer>
-  )
-}
+  );
+};
 
 function useOutsideClick(ref, open) {
   const dispatch = useDispatch();
@@ -43,4 +42,4 @@ function useOutsideClick(ref, open) {
   }, [ref, open, dispatch]);
 }
 
-export default Cart
+export default Cart;

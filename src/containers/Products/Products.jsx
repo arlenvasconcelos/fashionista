@@ -8,7 +8,7 @@ import { Product, NavSearch } from "../../components";
 
 import "./Products.scss";
 
-const Products = ({ products, openedFilter }) => {
+const Products = ({ products }) => {
   const dispatch = useDispatch();
 
   const [showInput, setShowInput] = useState(false);
@@ -29,9 +29,7 @@ const Products = ({ products, openedFilter }) => {
               </div>
               <div className="products__items">
                 {products.map((product, key) => (
-                  <>
-                    <Product key={key} product={product} />
-                  </>
+                  <Product key={key} product={product} />
                 ))}
               </div>
             </>

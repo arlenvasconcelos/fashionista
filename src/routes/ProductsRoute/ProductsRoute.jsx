@@ -17,7 +17,7 @@ const ProductsRoutes = () => {
   useEffect(() => {
     const loadProducts = async () => {
       const data = await getProducts();
-      if (data.error) {
+      if (!data || data.error) {
         dispatch(setErrorMessage(data.error.message));
       } else {
         dispatch(setAllProducts(data));
@@ -32,7 +32,6 @@ const ProductsRoutes = () => {
       {!loading ? (
         !products.errorStatus ? (
           <Products
-            openedFilter={products.openedFilter}
             products={
               products.openedFilter
                 ? products.filteredProducts
@@ -46,7 +45,7 @@ const ProductsRoutes = () => {
         <Loading />
       )}
       <Footer
-        stylePosition={`${products.allProducts.length ? "relative" : "fixed"}`}
+        stylePosition={products.allProducts.length ? "relative" : "fixed"}
       />
     </>
   );
