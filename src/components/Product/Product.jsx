@@ -1,14 +1,14 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-import ProductPrice from "../ProductPrice/ProductPrice";
-import NoImage from "../NoImage/NoImage";
+import ProductPrice from '../ProductPrice/ProductPrice';
+import NoImage from '../NoImage/NoImage';
 
-import "./Product.scss";
+import './Product.scss';
 
 const Product = ({ product }) => {
   return (
-    <section className={`product${product.image ? "" : " no-image"}`}>
+    <section className={`product${product.image ? '' : ' no-image'}`}>
       <Link to={`/produto/${product.code_color}`}>
         <div className="product__content">
           {product.image ? (

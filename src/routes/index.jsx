@@ -1,8 +1,8 @@
 import React from 'react';
-import {Route, Switch} from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 
-import ProductsRoute from './ProductsRoute/ProductsRoute'
-import SingleProductRoute from './SingleProductRoute/SingleProductRoute'
+import ProductsRoute from './ProductsRoute/ProductsRoute';
+import SingleProductRoute from './SingleProductRoute/SingleProductRoute';
 
 const Routes = () => (
   <>
@@ -11,6 +11,6 @@ const Routes = () => (
       <Route path="/produto/:code_color" component={SingleProductRoute} />
     </Switch>
   </>
-)
+);
 
 export default Routes;

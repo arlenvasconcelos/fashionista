@@ -1,14 +1,14 @@
-.product{
+.product {
   margin: 8px;
   flex: 0 1 calc(25% - 16px);
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
 
-  .product__content{
+  .product__content {
     height: 100%;
     display: flex;
     flex-direction: column;
 
-    .price__off{
+    .price__off {
       font-weight: bold;
       text-decoration: none;
       color: black;
@@ -23,17 +23,16 @@
       max-width: 100%;
     }
   }
-  .product__footer{
+  .product__footer {
     display: flex;
     flex-direction: column;
     padding: 16px;
 
-    .product__name{
+    .product__name {
       font-weight: bold;
     }
   }
 }
-
 
 @media screen and (max-width: 768px) {
   .product {
@@ -50,4 +49,3 @@
     min-height: 350px;
   }
 }
-  

@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from 'react';
 
-import { useSelector, useDispatch } from "react-redux";
-import { setAllProducts, setErrorMessage } from "../../store/actions/products";
+import { useSelector, useDispatch } from 'react-redux';
+import { setAllProducts, setErrorMessage } from '../../store/actions/products';
 
-import { Products } from "../../containers";
-import { Loading, Footer, Error } from "../../components";
+import { Products } from '../../containers';
+import { Loading, Footer, Error } from '../../components';
 
-import { getProducts } from "../../service/api";
+import { getProducts } from '../../service/api';
 
 const ProductsRoutes = () => {
   const dispatch = useDispatch();
@@ -45,7 +45,7 @@ const ProductsRoutes = () => {
         <Loading />
       )}
       <Footer
-        stylePosition={products.allProducts.length ? "relative" : "fixed"}
+        stylePosition={products.allProducts.length ? 'relative' : 'fixed'}
       />
     </>
   );

@@ -1,18 +1,14 @@
 import React from 'react';
 
-import './ProductImage.scss'
+import './ProductImage.scss';
 import NoImage from '../NoImage/NoImage';
 
-const ProductImage = ({path}) => {
+const ProductImage = ({ path }) => {
   return (
     <div className="product-image">
-      {
-        path 
-          ? <img src={path} alt=""/>
-          : <NoImage/>
-      }
+      {path ? <img src={path} alt="" /> : <NoImage />}
     </div>
-  )
-}
+  );
+};
 
 export default ProductImage;

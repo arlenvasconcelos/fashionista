@@ -1,5 +1,5 @@
-.topbar{
-  background-color: #1D2224;
+.topbar {
+  background-color: #1d2224;
   color: white;
   padding: 16px 8px;
   font-size: 1.8rem;
@@ -7,37 +7,33 @@
   width: 100%;
   z-index: 2;
 
-  .topbar__logo{
+  .topbar__logo {
     font-family: 'Chelsea Market', cursive;
     color: white;
     border-radius: 5px;
     padding: 8px;
-    &:hover{
-      color: #FF324D;
+    &:hover {
+      color: #ff324d;
     }
   }
 
-  .topbar__icons{
+  .topbar__icons {
     display: flex;
     align-items: center;
-    .icon{
+    .icon {
       display: flex;
       justify-content: flex-end;
     }
-    
+
     .icon:hover {
-      color: #FF324D;
+      color: #ff324d;
       justify-content: flex-end;
     }
   }
-  
-  .topbar__content{
+
+  .topbar__content {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-
-  
 }
-
-

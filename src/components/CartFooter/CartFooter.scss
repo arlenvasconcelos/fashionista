@@ -1,27 +1,27 @@
-.cart__footer{
-  background-color: #4A4E50;
+.cart__footer {
+  background-color: #4a4e50;
   bottom: 0px;
   width: 100%;
   margin-top: auto;
 
-  .footer__content{
+  .footer__content {
     color: white;
     padding: 0px 16px;
-    & > *{
+    & > * {
       display: flex;
       justify-content: space-between;
       margin: 4px 0;
     }
-    .content__row{
+    .content__row {
       color: black;
     }
-    .content__row--total{
+    .content__row--total {
       color: white;
       font-size: 1.3em;
     }
   }
 
-  button{
+  button {
     width: 100%;
     background-color: #c6ff00;
     padding: 16px 8px;

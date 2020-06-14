@@ -6,52 +6,60 @@ const TYPES = {
   ADD_ITEM: 'ADD_ITEM',
   DECREASE_ITEM: 'DECREASE_ITEM',
   REMOVE_ITEM: 'REMOVE_ITEM',
-}
-
+};
 
 const updateItems = (data) => {
-  return ({
+  return {
     type: TYPES.UPDATE_ITEMS,
     payload: data,
-  })
-}
+  };
+};
 
 const addItem = (data) => {
-  return ({
+  return {
     type: TYPES.ADD_ITEM,
     payload: data,
-  })
-}
+  };
+};
 
 const decreaseItem = (data) => {
-  return ({
+  return {
     type: TYPES.DECREASE_ITEM,
     payload: data,
-  })
-}
+  };
+};
 
 const removeItem = (data) => {
-  return ({
+  return {
     type: TYPES.REMOVE_ITEM,
     payload: data,
-  })
-}
+  };
+};
 
 const clearCart = () => {
-  return ({
+  return {
     type: TYPES.CLEAR_CART,
-  })
-}
+  };
+};
 
 const openCart = () => {
-  return ({
+  return {
     type: TYPES.OPEN_CART,
-  })
-}
+  };
+};
 const closeCart = () => {
-  return ({
+  return {
     type: TYPES.CLOSE_CART,
-  })
-}
+  };
+};
 
-export { TYPES, updateItems, addItem, decreaseItem, removeItem, clearCart, openCart, closeCart }
+export {
+  TYPES,
+  updateItems,
+  addItem,
+  decreaseItem,
+  removeItem,
+  clearCart,
+  openCart,
+  closeCart,
+};

@@ -1,7 +1,7 @@
-import React from "react";
-import { AlertTriangle } from "react-feather";
+import React from 'react';
+import { AlertTriangle } from 'react-feather';
 
-import "./Error.scss";
+import './Error.scss';
 
 const Error = () => (
   <div className="error">

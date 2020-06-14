@@ -1,12 +1,12 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import { useDispatch } from "react-redux";
-import { toogleShowFilter } from "../../store/actions/products";
+import { useDispatch } from 'react-redux';
+import { toogleShowFilter } from '../../store/actions/products';
 
-import { AlertTriangle } from "react-feather";
-import { Product, NavSearch } from "../../components";
+import { AlertTriangle } from 'react-feather';
+import { Product, NavSearch } from '../../components';
 
-import "./Products.scss";
+import './Products.scss';
 
 const Products = ({ products }) => {
   const dispatch = useDispatch();

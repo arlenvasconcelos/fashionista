@@ -1,4 +1,4 @@
-.single-product{
+.single-product {
   width: 100%;
   max-width: 888px;
   display: flex;
@@ -8,20 +8,19 @@
   & > div {
     flex: 0 1 50%;
   }
-  &__icon{
+  &__icon {
     margin: 0 8px;
     margin-bottom: 8px;
     align-self: start;
   }
 }
-@media screen and (max-width: 450px){
-  .single-product{
+@media screen and (max-width: 450px) {
+  .single-product {
     flex-flow: column nowrap;
     justify-content: space-between;
     .product-image .product-details {
       flex: 0;
-      height: calc(100vh/2 - 62px);
+      height: calc(100vh / 2 - 62px);
     }
   }
-
-} 
+}

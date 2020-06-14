@@ -1,27 +1,27 @@
-import React, { useState } from "react";
-import { useDispatch } from "react-redux";
+import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
 
-import { addItem } from "../../store/actions/cart";
+import { addItem } from '../../store/actions/cart';
 
-import "./ProductDetails.scss";
-import ProductPrice from "../ProductPrice/ProductPrice";
+import './ProductDetails.scss';
+import ProductPrice from '../ProductPrice/ProductPrice';
 
 const ProductDetails = ({ product }) => {
   const dispatch = useDispatch();
 
-  const [selectedSize, setSelectedSize] = useState("");
+  const [selectedSize, setSelectedSize] = useState('');
   const [error, setError] = useState({
-    message: "",
+    message: '',
     status: false,
   });
 
   const handleSize = (value) => {
     if (value === selectedSize) {
-      setSelectedSize("");
+      setSelectedSize('');
     } else {
       setSelectedSize(value);
       setError({
-        message: "",
+        message: '',
         status: false,
       });
     }
@@ -30,7 +30,7 @@ const ProductDetails = ({ product }) => {
   const handleAddItem = (e) => {
     e.preventDefault();
 
-    if (selectedSize !== "") {
+    if (selectedSize !== '') {
       const { sizes, ...rest } = product;
 
       dispatch(
@@ -41,7 +41,7 @@ const ProductDetails = ({ product }) => {
       );
     } else {
       setError({
-        message: "Por favor, selecione um tamanho.",
+        message: 'Por favor, selecione um tamanho.',
         status: true,
       });
     }
@@ -53,10 +53,10 @@ const ProductDetails = ({ product }) => {
         <h4 className="details__name">{product.name}</h4>
         <p className="details__style">Ref:{product.code_color}</p>
         <p className="details__color">
-          Cor:{" "}
+          Cor:{' '}
           {product.color
             ? product.color.charAt(0) + product.color.slice(1).toLowerCase()
-            : ""}
+            : ''}
         </p>
         <div className="details__sizes">
           {product.sizes &&
@@ -81,7 +81,7 @@ const ProductDetails = ({ product }) => {
           onSale={product.on_sale}
         />
         <p className="details__installments">
-          {product.installments ? `${product.installments} sem juros` : ""}
+          {product.installments ? `${product.installments} sem juros` : ''}
         </p>
         <div className="details__button">
           <button onClick={handleAddItem}>COMPRAR</button>

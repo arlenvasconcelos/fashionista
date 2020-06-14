@@ -1,11 +1,11 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect } from 'react';
 
-import { useSelector, useDispatch } from "react-redux";
-import { closeCart } from "../../store/actions/cart";
+import { useSelector, useDispatch } from 'react-redux';
+import { closeCart } from '../../store/actions/cart';
 
-import { Drawer, CartDetails, CartHeader, CartFooter } from "../../components";
+import { Drawer, CartDetails, CartHeader, CartFooter } from '../../components';
 
-import "./Cart.scss";
+import './Cart.scss';
 
 const Cart = () => {
   const wrapperRef = useRef(null);
@@ -35,9 +35,9 @@ function useOutsideClick(ref, open) {
       }
     }
 
-    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener('mousedown', handleClickOutside);
     return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener('mousedown', handleClickOutside);
     };
   }, [ref, open, dispatch]);
 }

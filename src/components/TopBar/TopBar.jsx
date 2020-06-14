@@ -1,15 +1,15 @@
-import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import { ShoppingCart } from "react-feather";
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import { ShoppingCart } from 'react-feather';
 
-import { useSelector, useDispatch } from "react-redux";
-import { openCart } from "../../store/actions/cart";
-import { toogleShowFilter } from "../../store/actions/products";
+import { useSelector, useDispatch } from 'react-redux';
+import { openCart } from '../../store/actions/cart';
+import { toogleShowFilter } from '../../store/actions/products';
 
-import Notification from "../Notification/Notification";
-import NavSearch from "../NavSearch/NavSearch";
+import Notification from '../Notification/Notification';
+import NavSearch from '../NavSearch/NavSearch';
 
-import "./TopBar.scss";
+import './TopBar.scss';
 
 export default () => {
   const { cart } = useSelector((state) => state);
